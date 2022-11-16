@@ -4,8 +4,8 @@
 		"text": "INICIO"
 	},
 	"ourServices": {
-		"link": "/Nuestros-servicios",
-		"text": "NUESTROS SERVICIOS"
+		"link": "/servicios",
+		"text": "SERVICIOS"
 	},
 	"gallery": {
 		"link": "/Galeria",

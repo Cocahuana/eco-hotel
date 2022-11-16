@@ -8,15 +8,15 @@ import {
 	useColorModeValue,
 	useDisclosure,
 } from "@chakra-ui/react";
-import {ChevronDownIcon} from "@chakra-ui/icons";
-import {useContext} from "react";
-import {themeContext} from "../../context/themeContext";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { useContext } from "react";
+import { themeContext } from "../../context/themeContext";
 
-export const MobileNavItem = ({label, children, href}) => {
-	const {isOpen, onToggle} = useDisclosure();
+export const MobileNavItem = ({ label, children, href }) => {
+	const { isOpen, onToggle } = useDisclosure();
 
 	const myTheme = useContext(themeContext);
-	const {text, accent1} = myTheme;
+	const { text, accent1 } = myTheme;
 	return (
 		<Stack spacing={4} onClick={children && onToggle}>
 			<Flex
@@ -27,10 +27,12 @@ export const MobileNavItem = ({label, children, href}) => {
 				align={"center"}
 				_hover={{
 					textDecoration: "none",
-				}}>
+				}}
+			>
 				<Text
 					fontWeight={700}
-					color={useColorModeValue(text.secondary, text.base)}>
+					color={useColorModeValue(text.navItems, text.base)}
+				>
 					{label}
 				</Text>
 				{children && (
@@ -47,14 +49,17 @@ export const MobileNavItem = ({label, children, href}) => {
 			<Collapse
 				in={isOpen}
 				animateOpacity
-				style={{marginTop: "0!important"}}>
+				style={{ marginTop: "0!important" }}
+			>
 				<Stack
 					mt={2}
 					pl={4}
 					borderLeft={1}
 					borderStyle={"solid"}
 					borderColor={useColorModeValue(accent1, "gray.700")}
-					align={"start"}>
+					color={text.navItems}
+					align={"start"}
+				>
 					{children &&
 						children.map((child) => (
 							<Link key={child.label} py={2} href={child.href}>
