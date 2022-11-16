@@ -25,9 +25,10 @@ function Navigation() {
 	return (
 		<Box>
 			<Flex
+				//popover container:
 				bg={useColorModeValue(background.base, background.secondary)}
-				color={useColorModeValue(text.secondary, text.base)}
-				minH={"8vh"}
+				color={useColorModeValue(text.withAccent1, text.secondary)}
+				minH={"10vh"}
 				py={{ base: 2 }}
 				px={{ base: 4 }}
 				align={"center"}
@@ -61,9 +62,9 @@ function Navigation() {
 						})}
 						fontFamily={"heading"}
 						fontWeight={"bold"}
-						color={useColorModeValue(text.base, text.secondary)}
+						color={useColorModeValue(text.withAccent1, text.base)}
 					>
-						<Link to='/'>Infocrip S.R.L</Link>
+						<Link to='/'>ECO HOTEL PRAGMA</Link>
 					</Text>
 
 					<Flex display={{ base: "none", md: "flex" }} ml={10}>

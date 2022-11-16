@@ -7,17 +7,20 @@ import {
 	PopoverContent,
 	useColorModeValue,
 } from "@chakra-ui/react";
-import {DesktopSubNav} from "./DesktopSubNab";
-import {useContext} from "react";
-import {themeContext} from "../../context/themeContext";
-import {Link as RouterLink} from "react-router-dom";
+import { DesktopSubNav } from "./DesktopSubNab";
+import { useContext } from "react";
+import { themeContext } from "../../context/themeContext";
+import { Link as RouterLink } from "react-router-dom";
 export const DesktopNav = (props) => {
-	const {NAV_ITEMS} = props;
+	const { NAV_ITEMS } = props;
 	const myTheme = useContext(themeContext);
-	const {text} = myTheme;
-	const linkColor = useColorModeValue(text.base, text.secondary);
-	const linkHoverColor = useColorModeValue(text.secondary, text.base);
-	const popoverContentBgColor = useColorModeValue(text.base, text.secondary);
+	const { text, background } = myTheme;
+	const linkColor = useColorModeValue(text.navItems, text.secondary);
+	const linkHoverColor = useColorModeValue(text.navItems_active, text.base);
+	const popoverContentBgColor = useColorModeValue(
+		background.popoverBgColor,
+		text.secondary
+	);
 
 	return (
 		<Stack direction={"row"} spacing={4}>
@@ -27,10 +30,7 @@ export const DesktopNav = (props) => {
 						<PopoverTrigger>
 							<Link
 								as={RouterLink}
-								to={
-									navItem.href ??
-									"#Router-dom-btn-not-working"
-								}
+								to={navItem.href ?? "#No defined href"}
 								p={2}
 								fontSize={"md"}
 								fontWeight={600}
@@ -38,7 +38,8 @@ export const DesktopNav = (props) => {
 								_hover={{
 									textDecoration: "none",
 									color: linkHoverColor,
-								}}>
+								}}
+							>
 								{navItem.label}
 							</Link>
 						</PopoverTrigger>
@@ -50,7 +51,8 @@ export const DesktopNav = (props) => {
 								bg={popoverContentBgColor}
 								p={4}
 								rounded={"xl"}
-								minW={"sm"}>
+								minW={"sm"}
+							>
 								<Stack>
 									{navItem.children.map((child) => (
 										<DesktopSubNav
