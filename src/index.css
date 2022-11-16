@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+  /* Colors */
+  --black: #000;
+  --gold-lighter: #bb9f3f;
+  --gold: #997E1E;
+  --gray: #cdcdcd;
+  --white: #ffffff;
+  /* Background */
+  --bg-base: var(--black);
+  --bg-secondary: var(--white);
+  /* Text */
+  --text-base: var(--black);
+  --text-secondary: var(--white);
+  --text-with-accent1: var(--gold);
+  /* General */
+  --accent1: var(--gold);
+  --accent1-active: var(--gold-lighter);
+  --border-color: var(--gray);
+
+}
