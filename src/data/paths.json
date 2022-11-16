@@ -1,0 +1,22 @@
+{
+	"home": {
+		"link": "/",
+		"text": "Inicio"
+	},
+	"ourServices": {
+		"link": "/Nuestros-servicios",
+		"text": "Nuestros servicios"
+	},
+	"gallery": {
+		"link": "/Galeria",
+		"text": "Galeria"
+	},
+	"location": {
+		"link": "/Ubicacion",
+		"text": "Ubicacion"
+	},
+	"contact": {
+		"link": "/Contacto",
+		"text": "Contacto"
+	}
+}

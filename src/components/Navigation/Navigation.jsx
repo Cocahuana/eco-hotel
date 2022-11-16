@@ -15,10 +15,12 @@ import { DesktopNav } from "./DesktopNav";
 import { useContext } from "react";
 import { themeContext } from "../../context/themeContext";
 import { Link } from "react-router-dom";
+import { Paths } from "..";
 function Navigation() {
 	const { isOpen, onToggle } = useDisclosure();
 	const myTheme = useContext(themeContext);
 	const { background, text } = myTheme;
+
 	// Styling:
 	return (
 		<Box>
@@ -76,18 +78,19 @@ function Navigation() {
 		</Box>
 	);
 }
+const { home, ourServices, gallery, location, contact } = Paths;
 const NAV_ITEMS = [
 	{
-		label: "Inicio",
-		href: "/",
+		label: home.text,
+		href: home.link,
 	},
 	{
-		label: "Servicios",
+		label: ourServices.text,
 		children: [
 			{
-				label: "Servicio Técnico",
-				subLabel: "Mantenimiento, reparacion de PC, Armado de equipos",
-				href: "#",
+				label: "Servicio housing",
+				subLabel: "Mantenimiento, limpieza, comedor..",
+				href: ourServices.link,
 			},
 			{
 				label: "Soporte Técnico Remoto",
@@ -102,27 +105,27 @@ const NAV_ITEMS = [
 		],
 	},
 	{
-		label: "Find Work",
+		label: gallery.text,
 		children: [
 			{
-				label: "Job Board",
-				subLabel: "Find your dream design job",
-				href: "#",
+				label: "Habitaciones",
+				subLabel: "El mejor lugar para vivir",
+				href: gallery.link,
 			},
 			{
-				label: "Freelance Projects",
-				subLabel: "An exclusive list for contract work",
-				href: "#",
+				label: "Edificio",
+				subLabel: "Un lugar increible en Neuquen",
+				href: gallery.link,
 			},
 		],
 	},
 	{
-		label: "Learn Design",
-		href: "#",
+		label: location.text,
+		href: location.link,
 	},
 	{
-		label: "Hire Designers",
-		href: "#",
+		label: contact.text,
+		href: contact.link,
 	},
 ];
 export default Navigation;

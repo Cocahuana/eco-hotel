@@ -1,6 +1,3 @@
 import { ViewDesktop, ViewTablet, ViewMobile } from "./Breakpoints";
-export {
-    ViewMobile,
-    ViewTablet,
-    ViewDesktop,
-}
+import Paths from "../data/paths.json";
+export { ViewMobile, ViewTablet, ViewDesktop, Paths };
