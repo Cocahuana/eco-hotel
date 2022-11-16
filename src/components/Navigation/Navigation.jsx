@@ -51,22 +51,21 @@ function Navigation() {
 						aria-label={"Toggle Navigation"}
 					/>
 				</Flex>
+				<Text
+					textAlign={useBreakpointValue({
+						base: "center",
+						md: "left",
+					})}
+					fontFamily={"heading"}
+					fontWeight={"bold"}
+					color={useColorModeValue(text.withAccent1, text.base)}
+				>
+					<Link to='/'>ECO HOTEL PRAGMA</Link>
+				</Text>
 				<Flex
 					flex={{ base: 1 }}
-					justify={{ base: "center", md: "start" }}
+					justify={{ base: "center", md: "end" }}
 				>
-					<Text
-						textAlign={useBreakpointValue({
-							base: "center",
-							md: "left",
-						})}
-						fontFamily={"heading"}
-						fontWeight={"bold"}
-						color={useColorModeValue(text.withAccent1, text.base)}
-					>
-						<Link to='/'>ECO HOTEL PRAGMA</Link>
-					</Text>
-
 					<Flex display={{ base: "none", md: "flex" }} ml={10}>
 						<DesktopNav NAV_ITEMS={NAV_ITEMS} />
 					</Flex>
