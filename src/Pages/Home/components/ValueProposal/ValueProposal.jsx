@@ -49,7 +49,7 @@ function ValueProposal() {
 							</Text>
 						</Box>
 						{/*  */}
-						<CTAGold text='DESCARGAR' />
+						<CTAGold text='DESCARGAR BROCHURE' />
 						{/*  */}
 						<Flex
 							w='67.5rem'

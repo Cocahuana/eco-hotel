@@ -86,6 +86,7 @@ const NAV_ITEMS = [
 	},
 	{
 		label: ourServices.text,
+		href: ourServices.link,
 		children: [
 			{
 				label: "RESTAURANT",
@@ -109,18 +110,7 @@ const NAV_ITEMS = [
 	},
 	{
 		label: gallery.text,
-		children: [
-			{
-				label: "Habitaciones",
-				subLabel: "El mejor lugar para vivir",
-				href: gallery.link,
-			},
-			{
-				label: "Edificio",
-				subLabel: "Un lugar increible en Neuquen",
-				href: gallery.link,
-			},
-		],
+		href: gallery.link,
 	},
 	{
 		label: location.text,

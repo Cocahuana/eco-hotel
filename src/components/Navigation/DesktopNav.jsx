@@ -11,6 +11,8 @@ import { DesktopSubNav } from "./DesktopSubNab";
 import { useContext } from "react";
 import { themeContext } from "../../context/themeContext";
 import { Link as RouterLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 export const DesktopNav = (props) => {
 	const { NAV_ITEMS } = props;
 	const myTheme = useContext(themeContext);
@@ -30,7 +32,6 @@ export const DesktopNav = (props) => {
 						<PopoverTrigger>
 							<Link
 								as={RouterLink}
-								to={navItem.href ?? "#No defined href"}
 								p={2}
 								fontSize={"md"}
 								fontWeight={600}
@@ -40,7 +41,12 @@ export const DesktopNav = (props) => {
 									color: linkHoverColor,
 								}}
 							>
-								{navItem.label}
+								<HashLink
+									smooth
+									to={navItem.href ?? "#No defined href"}
+								>
+									{navItem.label}
+								</HashLink>
 							</Link>
 						</PopoverTrigger>
 
