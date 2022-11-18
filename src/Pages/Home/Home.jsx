@@ -2,6 +2,7 @@ import Hero from "../../components/Hero/Hero";
 import ecoHotelImg from "../../assets/img/ecoHotel.jpg";
 import helicopter from "../../assets/img/ecoHotelOutside-helicopter.jpg";
 import HeroContent from "./components/HeroContent";
+import ValueProposal from "./components/ValueProposal/ValueProposal";
 const ecoHotel = {
 	title: "ECO HOTEL",
 	subTitle: "Tu mejor experiencia en Vaca Muerta",
@@ -24,6 +25,7 @@ function Home() {
 				bg='black'
 				position='left'
 			></Hero>
+			<ValueProposal />
 		</>
 	);
 }

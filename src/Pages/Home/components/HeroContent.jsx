@@ -1,6 +1,7 @@
 import { Flex, Text, Heading } from "@chakra-ui/react";
 import { useContext } from "react";
 import { themeContext } from "../../../context/themeContext";
+import GoldHeading from "../../../components/Heading/GoldHeading";
 function HeroContent(props) {
 	const myTheme = useContext(themeContext);
 	const { accent1, text } = myTheme;
@@ -23,13 +24,11 @@ function HeroContent(props) {
 				px={{ base: "10%" }}
 				py={{ base: "80px" }}
 			>
-				<Heading as='h5' size='md' color={accent1} mb='20px'>
-					{title}
-				</Heading>
+				<GoldHeading title={title} />
 				<Heading as='h2' color={basedOnPosition} mb={5}>
 					{subTitle}
 				</Heading>
-				<Text textAlign='justify' color={basedOnPosition}>
+				<Text textAlign='justify' color={"#5E5E5E"}>
 					{description}
 				</Text>
 			</Flex>
