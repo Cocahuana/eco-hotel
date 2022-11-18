@@ -18,14 +18,14 @@ function Home() {
 					position='right'
 				/>
 			</Hero>
-			<Hero img={ecoHotelImg} alt='Eco Hotel' bg='white' position='left'>
+			{/* <Hero img={ecoHotelImg} alt='Eco Hotel' bg='white' position='left'>
 				<HeroContent
 					title={ecoHotel.title}
 					subTitle={ecoHotel.subTitle}
 					description={ecoHotel.description}
 					position='left'
 				/>
-			</Hero>
+			</Hero> */}
 			<ValueProposal />
 		</>
 	);

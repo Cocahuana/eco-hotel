@@ -43,21 +43,6 @@ function CustomCard(props) {
 					</Container>
 				</Flex>
 			</Card>
-
-			{/* <Card color={textColor ?? "black"}>
-				<CardHeader>
-					<Image
-						src={icon ?? console.log("Not Image")}
-						alt={title + "icon"}
-						h='85px'
-						w='85px'
-					/>
-					<Heading as='h4'>{title ?? "Not title Assigned"}</Heading>
-				</CardHeader>
-				<CardBody>
-					<Text>{description ?? "Not Description Assigned"}</Text>
-				</CardBody>
-			</Card> */}
 		</>
 	);
 }
