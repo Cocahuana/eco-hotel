@@ -1,22 +1,22 @@
 {
 	"home": {
 		"link": "/",
-		"text": "Inicio"
+		"text": "INICIO"
 	},
 	"ourServices": {
-		"link": "/Nuestros-servicios",
-		"text": "Nuestros servicios"
+		"link": "/servicios",
+		"text": "SERVICIOS"
 	},
 	"gallery": {
 		"link": "/Galeria",
-		"text": "Galeria"
+		"text": "GALERIA"
 	},
 	"location": {
 		"link": "/Ubicacion",
-		"text": "Ubicacion"
+		"text": "UBICACION"
 	},
 	"contact": {
 		"link": "/Contacto",
-		"text": "Contacto"
+		"text": "CONTACTO"
 	}
 }

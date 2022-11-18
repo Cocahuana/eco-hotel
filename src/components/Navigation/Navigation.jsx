@@ -25,9 +25,10 @@ function Navigation() {
 	return (
 		<Box>
 			<Flex
+				//popover container:
 				bg={useColorModeValue(background.base, background.secondary)}
-				color={useColorModeValue(text.secondary, text.base)}
-				minH={"8vh"}
+				color={useColorModeValue(text.withAccent1, text.secondary)}
+				minH={"10vh"}
 				py={{ base: 2 }}
 				px={{ base: 4 }}
 				align={"center"}
@@ -50,22 +51,21 @@ function Navigation() {
 						aria-label={"Toggle Navigation"}
 					/>
 				</Flex>
+				<Text
+					textAlign={useBreakpointValue({
+						base: "center",
+						md: "left",
+					})}
+					fontFamily={"heading"}
+					fontWeight={"bold"}
+					color={useColorModeValue(text.withAccent1, text.base)}
+				>
+					<Link to='/'>ECO HOTEL PRAGMA</Link>
+				</Text>
 				<Flex
 					flex={{ base: 1 }}
-					justify={{ base: "center", md: "start" }}
+					justify={{ base: "center", md: "end" }}
 				>
-					<Text
-						textAlign={useBreakpointValue({
-							base: "center",
-							md: "left",
-						})}
-						fontFamily={"heading"}
-						fontWeight={"bold"}
-						color={useColorModeValue(text.base, text.secondary)}
-					>
-						<Link to='/'>Infocrip S.R.L</Link>
-					</Text>
-
 					<Flex display={{ base: "none", md: "flex" }} ml={10}>
 						<DesktopNav NAV_ITEMS={NAV_ITEMS} />
 					</Flex>
