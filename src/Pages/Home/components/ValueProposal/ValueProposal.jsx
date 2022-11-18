@@ -4,6 +4,7 @@ import qualityIcon from "./quality-icon.svg";
 import GoldHeading from "../../../../components/Heading/GoldHeading";
 import CustomCard from "./CustomCard";
 import CTAGold from "../../../../components/Buttons/CTAGold";
+import { ViewDesktop } from "../../../../components/Breakpoints";
 function ValueProposal() {
 	const proposal = {
 		title: "Vivir en un 5 estrellas",
@@ -25,57 +26,59 @@ function ValueProposal() {
 	return (
 		<>
 			<Box bg='black'>
-				<Flex alignItems='center' justifyContent='center'>
-					<Flex
-						flexDirection='column'
-						alignItems='center'
-						justifyContent='center'
-						minH='50vh'
-						w='67.5rem'
-					>
-						<Box
-							display='flex'
+				<ViewDesktop>
+					<Flex alignItems='center' justifyContent='center'>
+						<Flex
 							flexDirection='column'
-							py='2%'
 							alignItems='center'
 							justifyContent='center'
-						>
-							<GoldHeading title={proposal.title} />
-							<Heading as='h2' color='#cccccc' p='1%'>
-								{proposal.subTitle}
-							</Heading>
-							<Text p='2%' color='#cccccc' textAlign='center'>
-								{proposal.description}
-							</Text>
-						</Box>
-						{/*  */}
-						<CTAGold text='DESCARGAR BROCHURE' />
-						{/*  */}
-						<Flex
+							minH='50vh'
 							w='67.5rem'
-							py='30px'
-							align='center'
-							justifyContent='space-between'
 						>
-							<CustomCard
-								width={"45%"}
-								heigth={"30vh"}
-								textColor={"#cccccc"}
-								icon={cardQuality.icon}
-								title={cardQuality.title}
-								description={cardQuality.description}
-							/>
-							<CustomCard
-								width={"45%"}
-								heigth={"30vh"}
-								textColor={"#cccccc"}
-								icon={cardBuilding.icon}
-								title={cardBuilding.title}
-								description={cardBuilding.description}
-							/>
+							<Box
+								display='flex'
+								flexDirection='column'
+								py='2%'
+								alignItems='center'
+								justifyContent='center'
+							>
+								<GoldHeading title={proposal.title} />
+								<Heading as='h2' color='#cccccc' p='1%'>
+									{proposal.subTitle}
+								</Heading>
+								<Text p='2%' color='#cccccc' textAlign='center'>
+									{proposal.description}
+								</Text>
+							</Box>
+							{/*  */}
+							<CTAGold text='DESCARGAR BROCHURE' />
+							{/*  */}
+							<Flex
+								w='67.5rem'
+								py='30px'
+								align='center'
+								justifyContent='space-between'
+							>
+								<CustomCard
+									width={"45%"}
+									heigth={"30vh"}
+									textColor={"#cccccc"}
+									icon={cardQuality.icon}
+									title={cardQuality.title}
+									description={cardQuality.description}
+								/>
+								<CustomCard
+									width={"45%"}
+									heigth={"30vh"}
+									textColor={"#cccccc"}
+									icon={cardBuilding.icon}
+									title={cardBuilding.title}
+									description={cardBuilding.description}
+								/>
+							</Flex>
 						</Flex>
 					</Flex>
-				</Flex>
+				</ViewDesktop>
 			</Box>
 		</>
 	);

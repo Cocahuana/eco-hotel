@@ -86,7 +86,6 @@ const NAV_ITEMS = [
 	},
 	{
 		label: ourServices.text,
-		href: ourServices.link,
 		children: [
 			{
 				label: "RESTAURANT",
@@ -98,13 +97,13 @@ const NAV_ITEMS = [
 				label: "ACTIVIDAD DEPORTIVA",
 				subLabel:
 					"Cancha de Fútbol con césped sintético, Gimnasio y máquinas de musculación.",
-				href: "#",
+				href: ourServices.link,
 			},
 			{
 				label: "ESPACIOS DE TRABAJO",
 				subLabel:
 					"Equipamiento de avanzada, espacios privados y de coworking, WI-FI por fibra óptica y Seguridad.",
-				href: "#",
+				href: ourServices.link,
 			},
 		],
 	},
