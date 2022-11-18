@@ -4,19 +4,23 @@
 		"text": "INICIO"
 	},
 	"ourServices": {
-		"link": "/servicios",
-		"text": "SERVICIOS"
+		"link": "#Services",
+		"text": "SERVICIOS",
+		"id": "Services"
 	},
 	"gallery": {
-		"link": "/Galeria",
-		"text": "GALERIA"
+		"link": "#Galeria",
+		"text": "GALERIA",
+		"id": "Galeria"
 	},
 	"location": {
-		"link": "/Ubicacion",
-		"text": "UBICACION"
+		"link": "#Ubicacion",
+		"text": "UBICACION",
+		"id": "Ubicacion"
 	},
 	"contact": {
-		"link": "/Contacto",
-		"text": "CONTACTO"
+		"link": "#Contacto",
+		"text": "CONTACTO",
+		"id": "Contacto"
 	}
 }

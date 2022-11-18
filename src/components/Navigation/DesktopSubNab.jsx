@@ -7,6 +7,7 @@ import {
 	Link,
 	useColorModeValue,
 } from "@chakra-ui/react";
+import { HashLink } from "react-router-hash-link";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { useContext } from "react";
 import { themeContext } from "../../context/themeContext";
@@ -29,14 +30,16 @@ export const DesktopSubNav = ({ label, href, subLabel }) => {
 		>
 			<Stack direction={"row"} align={"center"}>
 				<Box>
-					<Text
-						transition={"all .3s ease"}
-						_groupHover={{ color: accent1_active }}
-						fontWeight={500}
-					>
-						{label}
-					</Text>
-					<Text fontSize={"sm"}>{subLabel}</Text>
+					<HashLink smooth to={href ?? "#No defined href"}>
+						<Text
+							transition={"all .3s ease"}
+							_groupHover={{ color: accent1_active }}
+							fontWeight={500}
+						>
+							{label}
+						</Text>
+						<Text fontSize={"sm"}>{subLabel}</Text>
+					</HashLink>
 				</Box>
 				<Flex
 					transition={"all .3s ease"}

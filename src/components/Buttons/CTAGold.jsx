@@ -32,7 +32,7 @@ const Button = styled.button`
 	letter-spacing: 2px;
 	border: 2px solid ${(props) => props.borderColor};
 	color: ${(props) => props.color};
-	margin: 0 1em;
+
 	padding: 0.25em 1em;
 	text-transform: uppercase;
 	&:hover ${IconBox} {

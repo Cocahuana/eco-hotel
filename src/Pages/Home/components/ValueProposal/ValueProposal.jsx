@@ -4,11 +4,12 @@ import qualityIcon from "./quality-icon.svg";
 import GoldHeading from "../../../../components/Heading/GoldHeading";
 import CustomCard from "./CustomCard";
 import CTAGold from "../../../../components/Buttons/CTAGold";
+import { ViewDesktop } from "../../../../components/Breakpoints";
 function ValueProposal() {
 	const proposal = {
 		title: "Vivir en un 5 estrellas",
-		subTitle: "EL UNICO CONSTRUIDO",
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla a nunc lacus. Suspendisse semper diam nec porta ornare. Morbi id interdum risus. Maecenas laoreet magna tellus, in varius tellus congue sit amet. Vivamus condimentum quis magna id egestas. Morbi posuere quam urna, nec porta sem ultrices sed. Integer in hendrerit quam, vel iaculis nunc. Morbi ac diam sed lectus aliquam dictum. Nulla mauris tortor, condimentum eu augue quis, finibus pellentesque ante. In hac habitasse platea dictumst. Cras in eros venenatis, volutpat turpis nec, vestibulum nulla.`,
+		subTitle: "ECO HOTEL PRAGMA",
+		description: `PRAGMA HOTEL es pionero en la región. Nuestra experiencia y reputación nos convirtieron en el hotel con mayor crecimiento en la zona. El proyecto de renovación de Pragma Hotel está a cargo de la arquitecta y diseñadora Claudia Faena, especialista en wellness y bienestar. Sus diseños tienen una impronta elegante y espectacular.`,
 	};
 	const cardQuality = {
 		icon: qualityIcon,
@@ -25,57 +26,59 @@ function ValueProposal() {
 	return (
 		<>
 			<Box bg='black'>
-				<Flex alignItems='center' justifyContent='center'>
-					<Flex
-						flexDirection='column'
-						alignItems='center'
-						justifyContent='center'
-						minH='50vh'
-						w='67.5rem'
-					>
-						<Box
-							display='flex'
+				<ViewDesktop>
+					<Flex alignItems='center' justifyContent='center'>
+						<Flex
 							flexDirection='column'
-							py='2%'
 							alignItems='center'
 							justifyContent='center'
-						>
-							<GoldHeading title={proposal.title} />
-							<Heading as='h2' color='#cccccc' p='1%'>
-								{proposal.subTitle}
-							</Heading>
-							<Text p='2%' color='#cccccc' textAlign='center'>
-								{proposal.description}
-							</Text>
-						</Box>
-						{/*  */}
-						<CTAGold text='DESCARGAR' />
-						{/*  */}
-						<Flex
+							minH='50vh'
 							w='67.5rem'
-							py='30px'
-							align='center'
-							justifyContent='space-between'
 						>
-							<CustomCard
-								width={"45%"}
-								heigth={"30vh"}
-								textColor={"#cccccc"}
-								icon={cardQuality.icon}
-								title={cardQuality.title}
-								description={cardQuality.description}
-							/>
-							<CustomCard
-								width={"45%"}
-								heigth={"30vh"}
-								textColor={"#cccccc"}
-								icon={cardBuilding.icon}
-								title={cardBuilding.title}
-								description={cardBuilding.description}
-							/>
+							<Box
+								display='flex'
+								flexDirection='column'
+								py='2%'
+								alignItems='center'
+								justifyContent='center'
+							>
+								<GoldHeading title={proposal.title} />
+								<Heading as='h2' color='#cccccc' p='1%'>
+									{proposal.subTitle}
+								</Heading>
+								<Text p='2%' color='#cccccc' textAlign='center'>
+									{proposal.description}
+								</Text>
+							</Box>
+							{/*  */}
+							<CTAGold text='DESCARGAR BROCHURE' />
+							{/*  */}
+							<Flex
+								w='67.5rem'
+								py='30px'
+								align='center'
+								justifyContent='space-between'
+							>
+								<CustomCard
+									width={"45%"}
+									heigth={"30vh"}
+									textColor={"#cccccc"}
+									icon={cardQuality.icon}
+									title={cardQuality.title}
+									description={cardQuality.description}
+								/>
+								<CustomCard
+									width={"45%"}
+									heigth={"30vh"}
+									textColor={"#cccccc"}
+									icon={cardBuilding.icon}
+									title={cardBuilding.title}
+									description={cardBuilding.description}
+								/>
+							</Flex>
 						</Flex>
 					</Flex>
-				</Flex>
+				</ViewDesktop>
 			</Box>
 		</>
 	);

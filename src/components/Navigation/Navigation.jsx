@@ -88,36 +88,28 @@ const NAV_ITEMS = [
 		label: ourServices.text,
 		children: [
 			{
-				label: "Servicio housing",
-				subLabel: "Mantenimiento, limpieza, comedor..",
+				label: "RESTAURANT",
+				subLabel:
+					"La experiencia del Restaurant se basa en la calidad de su cocina, en el amplio salón y -especialmente- en la buena atención.",
 				href: ourServices.link,
 			},
 			{
-				label: "Soporte Técnico Remoto",
-				subLabel: "Instalación de software de forma remota",
-				href: "#",
+				label: "ACTIVIDAD DEPORTIVA",
+				subLabel:
+					"Cancha de Fútbol con césped sintético, Gimnasio y máquinas de musculación.",
+				href: ourServices.link,
 			},
 			{
-				label: "Laboratorio de Electronica",
-				subLabel: "Reparacion de mothers, fuentes...",
-				href: "#",
+				label: "ESPACIOS DE TRABAJO",
+				subLabel:
+					"Equipamiento de avanzada, espacios privados y de coworking, WI-FI por fibra óptica y Seguridad.",
+				href: ourServices.link,
 			},
 		],
 	},
 	{
 		label: gallery.text,
-		children: [
-			{
-				label: "Habitaciones",
-				subLabel: "El mejor lugar para vivir",
-				href: gallery.link,
-			},
-			{
-				label: "Edificio",
-				subLabel: "Un lugar increible en Neuquen",
-				href: gallery.link,
-			},
-		],
+		href: gallery.link,
 	},
 	{
 		label: location.text,

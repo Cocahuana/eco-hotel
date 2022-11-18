@@ -13,11 +13,11 @@ function App() {
 			<BrowserRouter>
 				<Navigation />
 				<Routes>
-					<Route path={home.link} element={<Home />} />
-					<Route path={ourServices.link} element={<Home />} />
+					<Route path='/' element={<Home />} />
+					{/* <Route path={ourServices.link} element={<Home />} />
 					<Route path={gallery.link} element={<Home />} />
 					<Route path={location.link} element={<Home />} />
-					<Route path={contact.link} element={<Home />} />
+					<Route path={contact.link} element={<Home />} /> */}
 				</Routes>
 			</BrowserRouter>
 		</themeContext.Provider>

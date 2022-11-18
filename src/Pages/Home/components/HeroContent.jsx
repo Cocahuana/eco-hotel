@@ -1,7 +1,8 @@
-import { Flex, Text, Heading } from "@chakra-ui/react";
+import { Flex, Text, Heading, Box } from "@chakra-ui/react";
 import { useContext } from "react";
 import { themeContext } from "../../../context/themeContext";
 import GoldHeading from "../../../components/Heading/GoldHeading";
+import CTAGold from "../../../components/Buttons/CTAGold";
 function HeroContent(props) {
 	const myTheme = useContext(themeContext);
 	const { accent1, text } = myTheme;
@@ -31,6 +32,9 @@ function HeroContent(props) {
 				<Text textAlign='justify' color={"#5E5E5E"}>
 					{description}
 				</Text>
+				<Flex mt={10} align='center' justifyContent='flex-start'>
+					<CTAGold text='SOLICITAR RESERVA' />
+				</Flex>
 			</Flex>
 		</Flex>
 	);
