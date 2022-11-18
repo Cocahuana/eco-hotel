@@ -24,7 +24,7 @@ function ValueProposal() {
 	};
 	return (
 		<>
-			<Box bg='white'>
+			<Box bg='black'>
 				<Flex alignItems='center' justifyContent='center'>
 					<Flex
 						flexDirection='column'
@@ -41,23 +41,34 @@ function ValueProposal() {
 							justifyContent='center'
 						>
 							<GoldHeading title={proposal.title} />
-							<Heading as='h2' color='white' p='1%'>
+							<Heading as='h2' color='#cccccc' p='1%'>
 								{proposal.subTitle}
 							</Heading>
-							<Text p='2%' color='white' textAlign='center'>
+							<Text p='2%' color='#cccccc' textAlign='center'>
 								{proposal.description}
 							</Text>
 						</Box>
 						{/*  */}
 						<CTAGold text='DESCARGAR' />
 						{/*  */}
-						<Flex>
+						<Flex
+							w='67.5rem'
+							py='30px'
+							align='center'
+							justifyContent='space-between'
+						>
 							<CustomCard
+								width={"45%"}
+								heigth={"30vh"}
+								textColor={"#cccccc"}
 								icon={cardQuality.icon}
 								title={cardQuality.title}
 								description={cardQuality.description}
 							/>
 							<CustomCard
+								width={"45%"}
+								heigth={"30vh"}
+								textColor={"#cccccc"}
 								icon={cardBuilding.icon}
 								title={cardBuilding.title}
 								description={cardBuilding.description}

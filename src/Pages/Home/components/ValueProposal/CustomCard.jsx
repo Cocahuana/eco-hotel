@@ -1,23 +1,63 @@
-import { Card, CardHeader, CardBody, Text, Image } from "@chakra-ui/react";
-import GoldHeading from "../../../../components/Heading/GoldHeading";
+import {
+	Card,
+	CardHeader,
+	CardBody,
+	Text,
+	Image,
+	Heading,
+	Flex,
+	Container,
+} from "@chakra-ui/react";
 function CustomCard(props) {
-	const { icon, title, description } = props;
+	const { icon, title, description, textColor, width, heigth } = props;
 	return (
 		<>
-			<Card>
+			{/* We use ?? to say that when textColor is null, then use black as text color, otherwise, receive the textColor value by props */}
+			<Card
+				color={textColor ?? "black"}
+				w={width ?? "full"}
+				h={heigth ?? "100%"}
+			>
+				<Flex
+					flexDirection={"column"}
+					align='center'
+					justifyContent='center'
+				>
+					<Image
+						src={icon ?? console.log("Not Image")}
+						alt={title + "icon"}
+						h='85px'
+						w='85px'
+					/>
+					<Heading as='h4' mt='5px'>
+						{title ?? "Not title Assigned"}
+					</Heading>
+					<Container
+						textAlign='center'
+						lineHeight={"1.8em"}
+						overflowWrap='break-word'
+						mx='1em'
+						mt='1rem'
+					>
+						{description ?? "Not Description Assigned"}
+					</Container>
+				</Flex>
+			</Card>
+
+			{/* <Card color={textColor ?? "black"}>
 				<CardHeader>
 					<Image
-						src={icon}
+						src={icon ?? console.log("Not Image")}
 						alt={title + "icon"}
-						h='200px'
-						w='200px'
+						h='85px'
+						w='85px'
 					/>
-					<GoldHeading title={title} />
+					<Heading as='h4'>{title ?? "Not title Assigned"}</Heading>
 				</CardHeader>
 				<CardBody>
-					<Text>{description}</Text>
+					<Text>{description ?? "Not Description Assigned"}</Text>
 				</CardBody>
-			</Card>
+			</Card> */}
 		</>
 	);
 }
