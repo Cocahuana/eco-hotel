@@ -17,7 +17,7 @@ function CustomCard(props) {
 				color={textColor ?? "black"}
 				w={width ?? "full"}
 				h={heigth ?? "100%"}
-				py={{ base: "10%", md: "0" }}
+				py={{ base: "10%", md: "5%" }}
 			>
 				<Flex
 					flexDirection={"column"}

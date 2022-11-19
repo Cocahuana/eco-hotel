@@ -11,7 +11,7 @@ import {
 } from "../../../../components/Breakpoints";
 function ValueProposal() {
 	const proposal = {
-		title: "Vivir en un 5 estrellas",
+		title: "VIVIR EN UN 5 ESTRELLAS",
 		subTitle: "ECO HOTEL PRAGMA",
 		description: `PRAGMA HOTEL es pionero en la región. Nuestra experiencia y reputación nos convirtieron en el hotel con mayor crecimiento en la zona. El proyecto de renovación de Pragma Hotel está a cargo de la arquitecta y diseñadora Claudia Faena, especialista en wellness y bienestar. Sus diseños tienen una impronta elegante y espectacular.`,
 	};
@@ -124,23 +124,23 @@ function ValueProposal() {
 							</Box>
 							{/*  */}
 							<Flex
-								w={{ base: "100%", md: "67.5rem" }}
+								w='100%'
 								py='30px'
-								flexDirection={{ base: "column", md: "row" }}
-								align={{ base: "space-between", md: "center" }}
+								flexDirection='column'
+								align='center'
 								justifyContent='center'
 							>
 								<CustomCard
-									width={{ base: "100%", md: "45%" }}
-									heigth={{ base: "auto", md: "30vh" }}
+									width='100%'
+									heigth='auto'
 									textColor={"#cccccc"}
 									icon={cardQuality.icon}
 									title={cardQuality.title}
 									description={cardQuality.description}
 								/>
 								<CustomCard
-									width={{ base: "100%", md: "45%" }}
-									heigth={{ base: "auto", md: "30vh" }}
+									width='100%'
+									heigth='auto'
 									textColor={"#cccccc"}
 									icon={cardBuilding.icon}
 									title={cardBuilding.title}
