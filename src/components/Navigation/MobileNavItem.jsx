@@ -11,7 +11,7 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { useContext } from "react";
 import { themeContext } from "../../context/themeContext";
-
+import { HashLink } from "react-router-hash-link";
 export const MobileNavItem = ({ label, children, href }) => {
 	const { isOpen, onToggle } = useDisclosure();
 
@@ -29,12 +29,14 @@ export const MobileNavItem = ({ label, children, href }) => {
 					textDecoration: "none",
 				}}
 			>
-				<Text
-					fontWeight={700}
-					color={useColorModeValue(text.navItems, text.base)}
-				>
-					{label}
-				</Text>
+				<HashLink smooth to={href ?? "#No defined href"}>
+					<Text
+						fontWeight={700}
+						color={useColorModeValue(text.navItems, text.base)}
+					>
+						{label}
+					</Text>
+				</HashLink>
 				{children && (
 					<Icon
 						as={ChevronDownIcon}
