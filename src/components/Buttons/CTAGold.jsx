@@ -1,9 +1,8 @@
-import { Stack, Box, Text, Flex, Icon } from "@chakra-ui/react";
+import { Stack, Box, Link, Icon } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import styled from "styled-components";
 import { useContext } from "react";
 import { themeContext } from "../../context/themeContext";
-
 const IconBox = styled.div`
 	display: flex;
 	justify: center;
@@ -45,6 +44,14 @@ function CTAGold(props) {
 	const theme = useContext(themeContext);
 	return (
 		<Button
+			as='a'
+			// @href is the link for download
+			// @download is how the file will be named after being download
+			href={props.href}
+			target='_blank'
+			rel='noopener noreferrer'
+			download={props.fileName}
+			variant='outline'
 			color={theme.accent1}
 			borderColor={theme.accent1}
 			type='button'

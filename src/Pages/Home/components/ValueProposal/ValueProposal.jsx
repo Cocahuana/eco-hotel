@@ -9,6 +9,8 @@ import {
 	ViewTablet,
 	ViewMobile,
 } from "../../../../components/Breakpoints";
+import brochure from "../../../../assets/PRESENTACION 6.pdf";
+
 function ValueProposal() {
 	const proposal = {
 		title: "VIVIR EN UN 5 ESTRELLAS",
@@ -55,7 +57,11 @@ function ValueProposal() {
 								</Text>
 							</Box>
 							{/*  */}
-							<CTAGold text='DESCARGAR BROCHURE' />
+							<CTAGold
+								text='DESCARGAR BROCHURE'
+								href={brochure}
+								fileName='PRAGMA ECO HOTEL'
+							/>
 							{/*  */}
 							<Flex
 								w='67.5rem'
@@ -120,7 +126,11 @@ function ValueProposal() {
 							</Box>
 							{/*  */}
 							<Box pt={{ base: "5%", md: "0" }}>
-								<CTAGold text='DESCARGAR BROCHURE' />
+								<CTAGold
+									text='DESCARGAR BROCHURE'
+									href={brochure}
+									fileName='PRAGMA ECO HOTEL'
+								/>{" "}
 							</Box>
 							{/*  */}
 							<Flex
@@ -187,7 +197,11 @@ function ValueProposal() {
 							</Box>
 							{/*  */}
 							<Box pt={{ base: "5%", md: "0" }}>
-								<CTAGold text='DESCARGAR BROCHURE' />
+								<CTAGold
+									text='DESCARGAR BROCHURE'
+									href={brochure}
+									fileName='PRAGMA ECO HOTEL'
+								/>
 							</Box>
 							{/*  */}
 							<Flex
