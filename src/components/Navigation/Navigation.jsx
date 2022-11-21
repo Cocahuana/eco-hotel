@@ -26,7 +26,9 @@ function Navigation() {
 		<Box>
 			<Flex
 				//popover container:
-				bg={useColorModeValue(background.base, background.secondary)}
+				bg={useColorModeValue(background.secondary, background.base)}
+				borderBottom='solid 1px #ccc'
+				boxShadow='0 1px 0 #ccc'
 				color={useColorModeValue(text.withAccent1, text.secondary)}
 				minH={"10vh"}
 				py={{ base: 2 }}

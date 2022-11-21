@@ -13,7 +13,7 @@ import { useContext } from "react";
 import { themeContext } from "../../context/themeContext";
 export const DesktopSubNav = ({ label, href, subLabel }) => {
 	const myTheme = useContext(themeContext);
-	const { accent1, background, accent1_active } = myTheme;
+	const { background, text } = myTheme;
 	return (
 		<Link
 			href={href}
@@ -33,12 +33,14 @@ export const DesktopSubNav = ({ label, href, subLabel }) => {
 					<HashLink smooth to={href ?? "#No defined href"}>
 						<Text
 							transition={"all .3s ease"}
-							_groupHover={{ color: accent1_active }}
+							_groupHover={{ color: text.navItems }}
 							fontWeight={500}
 						>
 							{label}
 						</Text>
-						<Text fontSize={"sm"}>{subLabel}</Text>
+						<Text fontSize={"sm"} color={text.navItems}>
+							{subLabel}
+						</Text>
 					</HashLink>
 				</Box>
 				<Flex
@@ -53,7 +55,12 @@ export const DesktopSubNav = ({ label, href, subLabel }) => {
 					align={"center"}
 					flex={1}
 				>
-					<Icon color={accent1} w={5} h={5} as={ChevronRightIcon} />
+					<Icon
+						color={text.navItems}
+						w={5}
+						h={5}
+						as={ChevronRightIcon}
+					/>
 				</Flex>
 			</Stack>
 		</Link>
