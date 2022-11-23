@@ -1,4 +1,4 @@
-import { Heading, Flex, Text, Box } from "@chakra-ui/react";
+import { Heading, Flex, Text, Box, Image } from "@chakra-ui/react";
 import buildingIcon from "./building-icon.svg";
 import qualityIcon from "./quality-icon.svg";
 import GoldHeading from "../../../../components/Heading/GoldHeading";
@@ -10,8 +10,18 @@ import {
 	ViewMobile,
 } from "../../../../components/Breakpoints";
 import brochure from "../../../../assets/PRESENTACION 6.pdf";
-
-function ValueProposal() {
+// import rentabilidadImg from "./rentabilidad.jpeg";
+import planoDelComplejo from "./plano-del-complejo.jpeg";
+import styled from "@emotion/styled";
+const CardsWrapper = styled.div`
+	display: flex;
+	width: ${(props) => props.width};
+	margin-top: ${(props) => props.py};
+	margin-bottom: ${(props) => props.py};
+	align-items: center;
+	justify-content: space-between;
+`;
+function ValueProposal(props) {
 	const proposal = {
 		title: "VIVIR EN UN 5 ESTRELLAS",
 		subTitle: "ECO HOTEL PRAGMA",
@@ -63,12 +73,7 @@ function ValueProposal() {
 								fileName='PRAGMA ECO HOTEL'
 							/>
 							{/*  */}
-							<Flex
-								w='67.5rem'
-								py='30px'
-								align='center'
-								justifyContent='space-between'
-							>
+							<CardsWrapper width='67.5rem' py='30px'>
 								<CustomCard
 									width={"45%"}
 									heigth={"30vh"}
@@ -85,7 +90,11 @@ function ValueProposal() {
 									title={cardBuilding.title}
 									description={cardBuilding.description}
 								/>
+							</CardsWrapper>
+							<Flex mt='100px' mb='50px'>
+								<Image src={planoDelComplejo} />
 							</Flex>
+							{props.children}
 						</Flex>
 					</Flex>
 				</ViewDesktop>
@@ -156,6 +165,9 @@ function ValueProposal() {
 									title={cardBuilding.title}
 									description={cardBuilding.description}
 								/>
+							</Flex>
+							<Flex my='70px' h='100vh' px='10%' py='30%'>
+								<Image src={planoDelComplejo} />
 							</Flex>
 						</Flex>
 					</Flex>
