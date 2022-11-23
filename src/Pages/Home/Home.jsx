@@ -97,10 +97,6 @@ function Home() {
 					</Flex>
 				</ValueProposal>
 			</section>
-			<Section px={"2%"} py={"2%"} flexDirection='column'></Section>
-			<Section px={5} py={5} bg='black'>
-				<Heading as='h2'>Dummy Section</Heading>
-			</Section>
 		</>
 	);
 }
