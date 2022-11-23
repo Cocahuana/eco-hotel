@@ -146,7 +146,7 @@ function ValueProposal(props) {
 									text='DESCARGAR BROCHURE'
 									href={brochure}
 									fileName='PRAGMA ECO HOTEL'
-								/>{" "}
+								/>
 							</Box>
 							{/*  */}
 							<Flex
