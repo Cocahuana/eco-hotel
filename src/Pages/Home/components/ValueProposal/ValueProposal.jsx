@@ -39,6 +39,15 @@ function ValueProposal(props) {
 		description:
 			"Añelo es la ciudad neuquina sobre la que están puestos los ojos del mundo. Es considerada la capital de Vaca Muerta, la reserva de gas y petróleo no convencional más grande la Argentina y la segunda a nivel mundial.",
 	};
+	const planoImg = (
+		<Flex
+			my={{ base: "30px", md: "70px", lg: "100px" }}
+			px={{ md: "2%" }}
+			w={{ base: "100%" }}
+		>
+			<Image src={planoDelComplejo} />
+		</Flex>
+	);
 	return (
 		<>
 			<Box bg='black'>
@@ -91,9 +100,7 @@ function ValueProposal(props) {
 									description={cardBuilding.description}
 								/>
 							</CardsWrapper>
-							<Flex mt='100px' mb='50px'>
-								<Image src={planoDelComplejo} />
-							</Flex>
+							{planoImg}
 							{props.children}
 						</Flex>
 					</Flex>
@@ -166,14 +173,15 @@ function ValueProposal(props) {
 									description={cardBuilding.description}
 								/>
 							</Flex>
-							<Flex my='70px' h='100vh' px='10%' py='30%'>
-								<Image src={planoDelComplejo} />
-							</Flex>
+
+							{planoImg}
+							{props.children}
 						</Flex>
 					</Flex>
 				</ViewTablet>
 				<ViewMobile>
 					<Flex
+						maxW='100%'
 						alignItems='center'
 						justifyContent='center'
 						px={{ base: "5%", md: "0" }}
@@ -240,6 +248,8 @@ function ValueProposal(props) {
 									description={cardBuilding.description}
 								/>
 							</Flex>
+							{planoImg}
+							{props.children}
 						</Flex>
 					</Flex>
 				</ViewMobile>

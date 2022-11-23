@@ -45,13 +45,21 @@ function Home() {
 			<section id={ourServices.id} style={{ width: "100%" }}>
 				<ValueProposal>
 					<Flex bg='#997e1e' w='100%' h='1px'></Flex>
-					<Heading as='h2' m={5} color='#cccccc'>
+					<Heading
+						as='h2'
+						m={5}
+						color='#cccccc'
+						size={{ base: "md", md: "xl" }}
+						w='100%'
+						textAlign='center'
+					>
 						EN SOLO 6 MESES EMPIEZA EL RETORNO DE TU INVERSION
 					</Heading>
 					<Flex
 						w='100%'
 						align='center'
 						justifyContent='space-evenly'
+						flexDirection={{ base: "column", md: "row" }}
 						p={4}
 					>
 						{PricesInfo.map((card) => (
@@ -93,27 +101,6 @@ function Home() {
 			<Section px={5} py={5} bg='black'>
 				<Heading as='h2'>Dummy Section</Heading>
 			</Section>
-			{/* <>
-				<Flex w='100%' align='center' justifyContent='space-evenly'>
-					<Box borderTop='solid 2px #997E1E' w='80%'>
-						{PricesInfo.map((card) => (
-							<PricesCard
-								title={card.title}
-								subTitle={card.subTitle}
-								price={card.price}
-							/>
-						))}
-
-						<EarlyInvestment
-							title={earlyInvestment.title}
-							date={earlyInvestment.date}
-							subTitle={earlyInvestment.subTitle}
-							price={earlyInvestment.price}
-							ROI={earlyInvestment.ROI}
-						/>
-					</Box>
-				</Flex>
-			</> */}
 		</>
 	);
 }
