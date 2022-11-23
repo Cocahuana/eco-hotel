@@ -42,7 +42,7 @@ function Home() {
 					position='left'
 				/>
 			</Hero> */}
-			<section id={ourServices.id}>
+			<section id={ourServices.id} style={{ width: "100%" }}>
 				<ValueProposal>
 					<Flex bg='#997e1e' w='100%' h='1px'></Flex>
 					<Heading as='h2' m={5} color='#cccccc'>
