@@ -1,4 +1,4 @@
-import { Heading, Flex, Text, Box } from "@chakra-ui/react";
+import { Heading, Flex, Text, Box, Image } from "@chakra-ui/react";
 import buildingIcon from "./building-icon.svg";
 import qualityIcon from "./quality-icon.svg";
 import GoldHeading from "../../../../components/Heading/GoldHeading";
@@ -9,7 +9,19 @@ import {
 	ViewTablet,
 	ViewMobile,
 } from "../../../../components/Breakpoints";
-function ValueProposal() {
+import brochure from "../../../../assets/PRESENTACION 6.pdf";
+// import rentabilidadImg from "./rentabilidad.jpeg";
+import planoDelComplejo from "./plano-del-complejo.jpeg";
+import styled from "@emotion/styled";
+const CardsWrapper = styled.div`
+	display: flex;
+	width: ${(props) => props.width};
+	margin-top: ${(props) => props.py};
+	margin-bottom: ${(props) => props.py};
+	align-items: center;
+	justify-content: space-between;
+`;
+function ValueProposal(props) {
 	const proposal = {
 		title: "VIVIR EN UN 5 ESTRELLAS",
 		subTitle: "ECO HOTEL PRAGMA",
@@ -27,6 +39,15 @@ function ValueProposal() {
 		description:
 			"Añelo es la ciudad neuquina sobre la que están puestos los ojos del mundo. Es considerada la capital de Vaca Muerta, la reserva de gas y petróleo no convencional más grande la Argentina y la segunda a nivel mundial.",
 	};
+	const planoImg = (
+		<Flex
+			my={{ base: "30px", md: "70px", lg: "100px" }}
+			px={{ md: "2%" }}
+			w={{ base: "100%" }}
+		>
+			<Image src={planoDelComplejo} />
+		</Flex>
+	);
 	return (
 		<>
 			<Box bg='black'>
@@ -55,14 +76,13 @@ function ValueProposal() {
 								</Text>
 							</Box>
 							{/*  */}
-							<CTAGold text='DESCARGAR BROCHURE' />
+							<CTAGold
+								text='DESCARGAR BROCHURE'
+								href={brochure}
+								fileName='PRAGMA ECO HOTEL'
+							/>
 							{/*  */}
-							<Flex
-								w='67.5rem'
-								py='30px'
-								align='center'
-								justifyContent='space-between'
-							>
+							<CardsWrapper width='67.5rem' py='30px'>
 								<CustomCard
 									width={"45%"}
 									heigth={"30vh"}
@@ -79,7 +99,9 @@ function ValueProposal() {
 									title={cardBuilding.title}
 									description={cardBuilding.description}
 								/>
-							</Flex>
+							</CardsWrapper>
+							{planoImg}
+							{props.children}
 						</Flex>
 					</Flex>
 				</ViewDesktop>
@@ -120,7 +142,11 @@ function ValueProposal() {
 							</Box>
 							{/*  */}
 							<Box pt={{ base: "5%", md: "0" }}>
-								<CTAGold text='DESCARGAR BROCHURE' />
+								<CTAGold
+									text='DESCARGAR BROCHURE'
+									href={brochure}
+									fileName='PRAGMA ECO HOTEL'
+								/>
 							</Box>
 							{/*  */}
 							<Flex
@@ -147,11 +173,15 @@ function ValueProposal() {
 									description={cardBuilding.description}
 								/>
 							</Flex>
+
+							{planoImg}
+							{props.children}
 						</Flex>
 					</Flex>
 				</ViewTablet>
 				<ViewMobile>
 					<Flex
+						maxW='100%'
 						alignItems='center'
 						justifyContent='center'
 						px={{ base: "5%", md: "0" }}
@@ -187,7 +217,11 @@ function ValueProposal() {
 							</Box>
 							{/*  */}
 							<Box pt={{ base: "5%", md: "0" }}>
-								<CTAGold text='DESCARGAR BROCHURE' />
+								<CTAGold
+									text='DESCARGAR BROCHURE'
+									href={brochure}
+									fileName='PRAGMA ECO HOTEL'
+								/>
 							</Box>
 							{/*  */}
 							<Flex
@@ -214,6 +248,8 @@ function ValueProposal() {
 									description={cardBuilding.description}
 								/>
 							</Flex>
+							{planoImg}
+							{props.children}
 						</Flex>
 					</Flex>
 				</ViewMobile>

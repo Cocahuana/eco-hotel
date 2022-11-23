@@ -1,0 +1,26 @@
+{
+	"PricesInfo": [
+		{
+			"title": "INVERSIÓN",
+			"subTitle": "3 AMB + COCHERA",
+			"price": "U$S 95.000"
+		},
+		{
+			"title": "RENTA MENSUAL",
+			"subTitle": "PROYECTADA DESDE",
+			"price": "$385.000"
+		},
+		{
+			"title": "RENDIMIENTO ANUAL",
+			"subTitle": "ESTIMADO EN USD",
+			"price": "16%"
+		}
+	],
+	"earlyInvestment": {
+		"title": "INVERSIÓN TEMPRANA",
+		"date": "ANTES DEL 15/12/2022",
+		"subTitle": "INVERSIÓN 3 AMB + COCHERA",
+		"price": "U$S 75.000",
+		"ROI": "RENDIMIENTO ANUAL 20%"
+	}
+}
