@@ -127,7 +127,11 @@ function Home() {
 				<Flex bg='white' w='100%' minH='0vh'></Flex>
 			</section>
 			<section id={ourServices.restaurant.id} style={{ width: "100%" }}>
-				<Flex bg='white' w='100%' minH='30vh'></Flex>
+				<Flex
+					bg='white'
+					w='100%'
+					minH={{ base: "10vh", lg: "20vh" }}
+				></Flex>
 			</section>
 			<ServiciosSection
 				img={imgRestaurant}
@@ -143,7 +147,11 @@ function Home() {
 				></ServiciosContent>
 			</ServiciosSection>
 			<section id={ourServices.sport.id} style={{ width: "100%" }}>
-				<Flex bg='white' w='100%' minH='30vh'></Flex>
+				<Flex
+					bg='white'
+					w='100%'
+					minH={{ base: "10vh", lg: "20vh" }}
+				></Flex>
 			</section>
 			<ServiciosSection
 				img={imgActividadDeportivaCancha}
@@ -159,7 +167,11 @@ function Home() {
 				></ServiciosContent>
 			</ServiciosSection>
 			<section id={ourServices.coworking.id} style={{ width: "100%" }}>
-				<Flex bg='white' w='100%' minH='30vh'></Flex>
+				<Flex
+					bg='white'
+					w='100%'
+					minH={{ base: "10vh", lg: "20vh" }}
+				></Flex>
 			</section>
 			<ServiciosSection
 				img={imgCoWorking}
@@ -174,6 +186,12 @@ function Home() {
 					amenities={coworkingAmenities}
 				></ServiciosContent>
 			</ServiciosSection>
+			<Flex
+				mt='30px'
+				bg='black'
+				w='100%'
+				minH={{ base: "10vh", lg: "10vh" }}
+			></Flex>
 		</>
 	);
 }

@@ -1,11 +1,11 @@
 import { Flex, Img } from "@chakra-ui/react";
-import { ViewDesktop } from "../../../../components/Breakpoints";
+import { ViewDesktop, ViewTablet } from "../../../../components/Breakpoints";
 function ServiciosSection(props) {
 	const imgSide = (
-		<Flex w='47.5%' h='100%' bg={props.bg}>
+		<Flex w={{ base: "100%", lg: "47.5%" }} h='100%' bg={props.bg}>
 			<Img
 				w='100%'
-				h='75%'
+				h={{ lg: "100%" }}
 				src={props.img}
 				alt={props.alt}
 				filter='drop-shadow(0 0 0.75rem #aaa);'
@@ -19,35 +19,73 @@ function ServiciosSection(props) {
 	);
 	return (
 		<>
-			{props.position === "left" ? (
-				<>
-					<ViewDesktop>
-						<Flex minH='100vh' w='full'>
+			<ViewDesktop>
+				{props.position === "left" ? (
+					<>
+						{/* <ViewDesktop> */}
+						<Flex
+							minH={{ base: "100%", lg: "50vh" }}
+							w='full'
+							flexDirection={{ base: "column", lg: "row" }}
+							p={{ base: "20px", lg: 0 }}
+						>
 							{imgSide}
 							<Flex
-								w='52.5%'
+								w={{ base: "100%", lg: "52.5%" }}
 								flexDirection='column'
 								bg={props.bg}
+								pt={{ base: "100px", lg: 0 }}
 							>
 								{content}
 							</Flex>
 						</Flex>
-					</ViewDesktop>
-				</>
-			) : props.position === "right" ? (
-				<>
-					<ViewDesktop>
-						<Flex h='90vh' w='full'>
-							<Flex w='45%' bg={props.bg}>
+						{/* </ViewDesktop> */}
+					</>
+				) : props.position === "right" ? (
+					<>
+						{/* <ViewDesktop> */}
+						<Flex
+							minH={{ base: "100%", lg: "50vh" }}
+							w='full'
+							flexDirection={{ base: "column", lg: "row" }}
+						>
+							<Flex
+								w={{ base: "100%", lg: "52.5%" }}
+								bg={props.bg}
+								pb={{ base: "100px", lg: 0 }}
+							>
 								{content}
 							</Flex>
 							{imgSide}
 						</Flex>
-					</ViewDesktop>
+						{/* </ViewDesktop> */}
+					</>
+				) : (
+					<>{console.log("No position assigned")}</>
+				)}
+			</ViewDesktop>
+			<ViewTablet>
+				<>
+					{/* <ViewDesktop> */}
+					<Flex
+						minH={{ base: "100%", lg: "100vh" }}
+						w='full'
+						flexDirection={{ base: "column", lg: "row" }}
+						p={{ base: "20px", lg: 0 }}
+					>
+						{imgSide}
+						<Flex
+							w={{ base: "100%", lg: "52.5%" }}
+							flexDirection='column'
+							bg={props.bg}
+							pt={{ base: "100px", lg: 0 }}
+						>
+							{content}
+						</Flex>
+					</Flex>
+					{/* </ViewDesktop> */}
 				</>
-			) : (
-				<>{console.log("No position assigned")}</>
-			)}
+			</ViewTablet>
 		</>
 	);
 }
