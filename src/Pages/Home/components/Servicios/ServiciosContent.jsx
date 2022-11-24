@@ -26,16 +26,21 @@ function ServiciosContent(props) {
 			alignItems='center'
 			justifyContent='center'
 			flexDirection='column'
-			px='60px'
+			px={{ base: 0, md: "60px" }}
 			fontWeight='400'
 		>
-			<Flex w='100%' flexDir='column' pl='5%'>
+			<Flex w='100%' flexDir='column' pl={{ base: 0, md: "5%" }}>
 				<Box ml='10%'>
 					<GoldHeading title={title} letterSpacing='2px' />
 				</Box>
 				<Box h='2px' bg={accent1} w='25%'></Box>
 			</Flex>
-			<Flex w='100%' h='100%' flexDir='column' px='15%'>
+			<Flex
+				w='100%'
+				h='100%'
+				flexDir='column'
+				px={{ base: "2%", md: "15%" }}
+			>
 				<Flex flexDirection='column' pt='30px'>
 					<Heading as='h2' size='2xl' py='10px'>
 						{subTitle}
