@@ -88,24 +88,25 @@ const NAV_ITEMS = [
 	},
 	{
 		label: ourServices.text,
+		href: ourServices.link,
 		children: [
 			{
-				label: "RESTAURANT",
+				label: ourServices.restaurant.text,
 				subLabel:
 					"La experiencia del Restaurant se basa en la calidad de su cocina, en el amplio salón y -especialmente- en la buena atención.",
-				href: ourServices.link,
+				href: ourServices.restaurant.link,
 			},
 			{
-				label: "ACTIVIDAD DEPORTIVA",
+				label: ourServices.sport.text,
 				subLabel:
 					"Cancha de Fútbol con césped sintético, Gimnasio y máquinas de musculación.",
-				href: ourServices.link,
+				href: ourServices.sport.link,
 			},
 			{
-				label: "ESPACIOS DE TRABAJO",
+				label: ourServices.coworking.text,
 				subLabel:
 					"Equipamiento de avanzada, espacios privados y de coworking, WI-FI por fibra óptica y Seguridad.",
-				href: ourServices.link,
+				href: ourServices.coworking.link,
 			},
 		],
 	},

@@ -6,7 +6,22 @@
 	"ourServices": {
 		"link": "#Services",
 		"text": "SERVICIOS",
-		"id": "Services"
+		"id": "Services",
+		"restaurant": {
+			"link": "#Services-Restaurant",
+			"text": "RESTAURANT",
+			"id": "Services-Restaurant"
+		},
+		"sport": {
+			"link": "#Services-Sport",
+			"text": "ACTIVIDAD DEPORTIVA",
+			"id": "Services-Sport"
+		},
+		"coworking": {
+			"link": "#Services-Co-working",
+			"text": "CO-WORKING",
+			"id": "Services-Co-working"
+		}
 	},
 	"gallery": {
 		"link": "#Galeria",
