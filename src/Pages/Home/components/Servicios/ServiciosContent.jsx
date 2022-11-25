@@ -18,7 +18,7 @@ function ServiciosContent(props) {
 			? text.base
 			: position === "left"
 			? text.secondary
-			: "red";
+			: "blue";
 	return (
 		<Flex
 			h='100%'
