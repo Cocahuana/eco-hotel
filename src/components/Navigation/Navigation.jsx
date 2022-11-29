@@ -16,21 +16,38 @@ import { useContext } from "react";
 import { themeContext } from "../../context/themeContext";
 import { Link } from "react-router-dom";
 import { Paths } from "..";
+import { useState } from "react";
 function Navigation() {
 	const { isOpen, onToggle } = useDisclosure();
 	const myTheme = useContext(themeContext);
 	const { background, text } = myTheme;
 
+	const [colorChange, setColorchange] = useState(false);
+	const changeNavbarColor = () => {
+		if (window.pageYOffset > window.innerHeight * 0.1) {
+			setColorchange(true);
+		} else {
+			setColorchange(false);
+		}
+	};
+	window.addEventListener("scroll", changeNavbarColor);
+
 	// Styling:
 	return (
-		<Box>
+		<Box
+			zIndex='200020'
+			position='sticky'
+			top='0'
+			h={colorChange ? "10vh" : "0px"}
+			transition='all 0.3s ease-out'
+			bg={colorChange ? background.secondary : "transparent"}
+		>
 			<Flex
-				//popover container:
-				bg={useColorModeValue(background.secondary, background.base)}
-				borderBottom='solid 1px #ccc'
-				boxShadow='0 1px 0 #ccc'
+				transition='all 1s ease-out'
+				borderBottom={colorChange ? "solid 1px #ccc" : "0px"}
+				boxShadow={colorChange ? "0 1px 0 #ccc" : "0px"}
 				color={useColorModeValue(text.withAccent1, text.secondary)}
-				minH={"10vh"}
+				h={"10vh"}
 				py={{ base: 2 }}
 				px={{ base: 4 }}
 				align={"center"}
