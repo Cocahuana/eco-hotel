@@ -57,7 +57,7 @@ function HeroLanding(props) {
 					<Flex
 						align='center'
 						justifyContent='center'
-						w={{ base: "100%", lg: "75%" }}
+						w={{ base: "100%", xl: "75%" }}
 						h={{ base: "100%", lg: "50vh" }}
 						px={{ base: "1.5rem", lg: 0 }}
 						flexDirection={{ base: "column-reverse", lg: "row" }}
@@ -65,21 +65,21 @@ function HeroLanding(props) {
 						<Flex
 							w='100%'
 							borderRight={{
-								base: "",
+								base: "0px",
 								lg: `2px solid ${theme.accent1_active}`,
 							}}
 							borderTop={{
 								base: `2px solid ${theme.accent1_active}`,
-								lg: "",
+								lg: "0px",
 							}}
 							flexDirection='column'
 							justifyContent='center'
 							alignItems='center'
 							color='white'
-							py={{ base: "1rem", lg: "" }}
+							py={{ base: "1rem", lg: "0px" }}
 						>
 							<Text
-								fontSize='3rem'
+								fontSize={{ base: "1.5rem", md: "3rem" }}
 								color='red.500'
 								textDecoration='line-through'
 								fontWeight='bold'
@@ -87,10 +87,16 @@ function HeroLanding(props) {
 								USD 95000
 							</Text>
 							<Flex>
-								<Text fontSize='8rem' fontWeight='bold'>
+								<Text
+									fontSize={{ base: "3rem", md: "8rem" }}
+									fontWeight='bold'
+								>
 									$
 								</Text>
-								<Text fontSize='15rem' fontWeight='bold'>
+								<Text
+									fontSize={{ base: "5rem", md: "15rem" }}
+									fontWeight='bold'
+								>
 									75K
 								</Text>
 							</Flex>
@@ -118,13 +124,17 @@ function HeroLanding(props) {
 							py='10px'
 							px='20px'
 						>
-							<Text color='white' fontSize='2rem' w='100%'>
+							<Text
+								color='white'
+								fontSize={{ base: "1rem", md: "2rem" }}
+								w='100%'
+							>
 								INVERSIÓN TEMPRANA:
 							</Text>
 
 							<Text
 								color='#FFDD00'
-								fontSize='5rem'
+								fontSize={{ base: "3rem", md: "5rem" }}
 								fontFamily={theme.ff.bold}
 								w='100%'
 							>
@@ -132,7 +142,7 @@ function HeroLanding(props) {
 							</Text>
 							<Text
 								color='white'
-								fontSize='3rem'
+								fontSize={{ base: "1.8rem", md: "3rem" }}
 								w='100%'
 								fontWeight='800'
 							>
@@ -140,7 +150,7 @@ function HeroLanding(props) {
 							</Text>
 							<Text
 								color='white'
-								fontSize='1.5rem'
+								fontSize={{ base: "1rem", md: "1.5rem" }}
 								w='100%'
 								fontWeight='800'
 							>
