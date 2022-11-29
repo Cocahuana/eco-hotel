@@ -1,15 +1,29 @@
+@font-face {
+  font-family: 'DIN-Regular';
+  src: local('DIN-Regular'), url(./assets/fonts/din/DIN-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'DIN-Bold';
+  src: local('DIN-Bold'), url(./assets/fonts/din/DIN-Bold.ttf) format('truetype');
+}
+*{
+  font-family: var(--ff-DIN);
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  /* background-image: url(./assets/img/skyBg.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: cover cover; */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
 }
 
 :root{
@@ -26,6 +40,12 @@ code {
   --text-base: var(--black);
   --text-secondary: var(--white);
   --text-with-accent1: var(--gold);
+  /* Font-family */
+  --DIN-Bold: "DIN-Bold";
+  --ff-DIN-Bold: var(--DIN-Bold);
+  --DIN-Regular: "DIN-Regular";
+  --ff-DIN: var(--DIN-Regular);
+
   /* General */
   --accent1: var(--gold);
   --accent1-active: var(--gold-lighter);

@@ -18,4 +18,8 @@ export const theme = {
 	},
 	accent1: "var(--accent1)", // gold
 	accent1_active: "var(--accent1-active)", //gold lighter
+	ff: {
+		base: "var(--ff-DIN)",
+		bold: "var(--ff-DIN-Bold)",
+	},
 };

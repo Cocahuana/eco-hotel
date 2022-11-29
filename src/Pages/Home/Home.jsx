@@ -8,7 +8,7 @@ import PricesCard from "./components/PricesCard/PricesCard";
 import Prices from "./Data/Prices.json";
 import EarlyInvestment from "./components/EarlyInvestment";
 import styled from "styled-components";
-import { Flex, Heading, Text, Box } from "@chakra-ui/react";
+import { Flex, Heading, Text, Box, Image } from "@chakra-ui/react";
 import imgActividadDeportiva2 from "./components/Servicios/assets/actividad-deportiva-bajada.jpg";
 import imgActividadDeportivaCancha from "./components/Servicios/assets/actividad-deportiva.jpg";
 import imgDesayuno from "./components/Servicios/assets/desayuno.jpg";
@@ -17,6 +17,8 @@ import imgCoWorking2 from "./components/Servicios/assets/espacios-trabajo-bajada
 import imgCoWorking from "./components/Servicios/assets/espacios-trabajo.jpg";
 import ServiciosSection from "./components/Servicios/ServiciosSection";
 import ServiciosContent from "./components/Servicios/ServiciosContent";
+import HeroLanding from "./components/HeroLanding/HeroLanding";
+import fondoBlanco from "./components/HeroLanding/fondoBlanco.jpeg";
 const ecoHotel = {
 	title: "ECO HOTEL",
 	subTitle: "Tu mejor experiencia en Vaca Muerta",
@@ -51,20 +53,15 @@ function Home() {
 	];
 	return (
 		<>
-			<Hero img={ecoHotelImg} alt='Eco Hotel' bg='white' position='right'>
+			{/* <Flex w='100%' h='200vh' align='center' justify='center' bg='white'>
+			</Flex> */}
+			<HeroLanding w='100%' h='100vh' img={fondoBlanco} />
+			{/* <Hero img={ecoHotelImg} alt='Eco Hotel' bg='white' position='right'>
 				<HeroContent
 					title={ecoHotel.title}
 					subTitle={ecoHotel.subTitle}
 					description={ecoHotel.description}
 					position='right'
-				/>
-			</Hero>
-			{/* <Hero img={ecoHotelImg} alt='Eco Hotel' bg='white' position='left'>
-				<HeroContent
-					title={ecoHotel.title}
-					subTitle={ecoHotel.subTitle}
-					description={ecoHotel.description}
-					position='left'
 				/>
 			</Hero> */}
 
