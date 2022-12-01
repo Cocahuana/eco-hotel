@@ -5,6 +5,7 @@ import ecoHotel_dia from "./ecoHotel-dia.jpg";
 import skyBg from "./skyBg.jpg";
 import { useContext } from "react";
 import { themeContext } from "../../../../context/themeContext";
+import hotelEntero from "../../../../assets/img/pragma4.jpg";
 const goodParallax = (
 	<Parallax
 		style={{ height: "100%", width: "100%" }}
@@ -42,9 +43,9 @@ function HeroLanding(props) {
 		<Flex h={props.h} w={props.w}>
 			<Parallax
 				style={{ height: "100%", width: "100%" }}
-				bgImage={skyBg}
+				bgImage={hotelEntero}
 				bgImageAlt='Eco hotel sky'
-				strength={800}
+				strength={-300}
 			>
 				<Box
 					h={{ base: "100vh" }}
