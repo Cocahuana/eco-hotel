@@ -37,6 +37,9 @@ const goodParallax = (
 	</Parallax>
 );
 
+const whatsappLink =
+	"https://api.whatsapp.com/send?phone=5491150481966&text=Contacto:%20Eco%20Hotel%20Pragma";
+
 function HeroLanding(props) {
 	const theme = useContext(themeContext);
 	return (
@@ -109,8 +112,12 @@ function HeroLanding(props) {
 								fontWeight='bold'
 								fontFamily={theme.ff.bold}
 								fontSize='1.5rem'
+								as='a'
+								href={whatsappLink}
+								target='_blank'
+								rel='noopener noreferrer'
 							>
-								Agendar el mio!
+								Quiero contactarlos!
 							</Button>
 						</Flex>
 						<Flex
