@@ -203,6 +203,9 @@ function Home() {
 					></iframe>
 				</Flex>
 			</section>
+			<section id={contact.id} style={{ width: "100%" }}>
+				<Flex w='100%' h='60vh'></Flex>
+			</section>
 		</>
 	);
 }
