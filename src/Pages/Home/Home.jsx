@@ -189,6 +189,20 @@ function Home() {
 				w='100%'
 				minH={{ base: "10vh", lg: "10vh" }}
 			></Flex>
+			<section id={location.id} style={{ width: "100%" }}>
+				<Flex w='100%' h='60vh'>
+					<iframe
+						width='100%'
+						height='100%'
+						title='Eco hotel Location'
+						src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d50067.52262107152!2d-68.800222!3d-38.343886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b353272bfec21cf!2sEcotel%20Pragma%20A%C3%B1elo!5e0!3m2!1ses!2sar!4v1669908824019!5m2!1ses!2sar'
+						style={{ border: "0" }}
+						allowfullscreen=''
+						loading='lazy'
+						referrerpolicy='no-referrer-when-downgrade'
+					></iframe>
+				</Flex>
+			</section>
 		</>
 	);
 }
