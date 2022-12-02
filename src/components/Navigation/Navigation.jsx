@@ -7,6 +7,7 @@ import {
 	useColorModeValue,
 	useBreakpointValue,
 	useDisclosure,
+	Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { MobileNav } from "./MobileNav";
@@ -17,6 +18,7 @@ import { themeContext } from "../../context/themeContext";
 import { Link } from "react-router-dom";
 import { Paths } from "..";
 import { useState } from "react";
+import logoEcoHotel from "../../assets/img/logoEcohotel.jpeg";
 function Navigation() {
 	const { isOpen, onToggle } = useDisclosure();
 	const myTheme = useContext(themeContext);
@@ -79,7 +81,15 @@ function Navigation() {
 					fontWeight={"bold"}
 					color={useColorModeValue(text.withAccent1, text.base)}
 				>
-					<Link to='/'>ECO HOTEL PRAGMA</Link>
+					<Link to='/'>
+						<Image
+							src={logoEcoHotel}
+							transition='all 1s ease-out'
+							filter={
+								colorChange ? "opacity(100%)" : "opacity(0%)"
+							}
+						/>
+					</Link>
 				</Text>
 				<Flex
 					flex={{ base: 1 }}

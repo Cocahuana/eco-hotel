@@ -19,6 +19,13 @@ import ServiciosSection from "./components/Servicios/ServiciosSection";
 import ServiciosContent from "./components/Servicios/ServiciosContent";
 import HeroLanding from "./components/HeroLanding/HeroLanding";
 import fondoBlanco from "./components/HeroLanding/fondoBlanco.jpeg";
+import Contactanos from "./components/Contactanos";
+import {
+	colorDesarrollo,
+	colorEcoHotel,
+	colorConstrucciones,
+	colorHousing,
+} from "../../components/UnidadNegocioBar/ColoresNegocio/Colores";
 const ecoHotel = {
 	title: "ECO HOTEL",
 	subTitle: "Tu mejor experiencia en Vaca Muerta",
@@ -141,6 +148,7 @@ function Home() {
 					subTitle='GASTRONOMÍA'
 					description='En nuestra cafetería y restaurant podés disfrutar de deliciosos desayunos, almuerzos y cenas. Además de relajar después de la jornada de trabajo.'
 					amenities={restaurantAmenities}
+					unidad={colorDesarrollo}
 				></ServiciosContent>
 			</ServiciosSection>
 			<section id={ourServices.sport.id} style={{ width: "100%" }}>
@@ -161,6 +169,7 @@ function Home() {
 					subTitle='SALUD'
 					description='Nuestras instalaciones cuentan con espacios equipados para realizar actividades deportivas individuales y grupales.'
 					amenities={sportAmenities}
+					unidad={colorEcoHotel}
 				></ServiciosContent>
 			</ServiciosSection>
 			<section id={ourServices.coworking.id} style={{ width: "100%" }}>
@@ -181,6 +190,7 @@ function Home() {
 					subTitle='TRABAJO'
 					description='Contamos con un espacio de Coworking, sala de reuniones y salas de capacitación para el personal de las empresas que nos eligen.'
 					amenities={coworkingAmenities}
+					unidad={colorConstrucciones}
 				></ServiciosContent>
 			</ServiciosSection>
 			<Flex
@@ -203,9 +213,11 @@ function Home() {
 					></iframe>
 				</Flex>
 			</section>
-			<section id={contact.id} style={{ width: "100%" }}>
-				<Flex w='100%' h='60vh'></Flex>
-			</section>
+			{/* <section id={contact.id} style={{ width: "100%" }}>
+				<Flex w='100%' h='60vh'>
+					<Contactanos />
+				</Flex>
+			</section> */}
 		</>
 	);
 }
