@@ -5,6 +5,7 @@ import ecoHotel_dia from "./ecoHotel-dia.jpg";
 import skyBg from "./skyBg.jpg";
 import { useContext } from "react";
 import { themeContext } from "../../../../context/themeContext";
+import hotelEntero from "../../../../assets/img/pragma4.jpg";
 const goodParallax = (
 	<Parallax
 		style={{ height: "100%", width: "100%" }}
@@ -36,15 +37,18 @@ const goodParallax = (
 	</Parallax>
 );
 
+const whatsappLink =
+	"https://api.whatsapp.com/send?phone=5491150481966&text=Contacto:%20Eco%20Hotel%20Pragma";
+
 function HeroLanding(props) {
 	const theme = useContext(themeContext);
 	return (
 		<Flex h={props.h} w={props.w}>
 			<Parallax
 				style={{ height: "100%", width: "100%" }}
-				bgImage={skyBg}
+				bgImage={hotelEntero}
 				bgImageAlt='Eco hotel sky'
-				strength={800}
+				strength={-300}
 			>
 				<Box
 					h={{ base: "100vh" }}
@@ -108,8 +112,12 @@ function HeroLanding(props) {
 								fontWeight='bold'
 								fontFamily={theme.ff.bold}
 								fontSize='1.5rem'
+								as='a'
+								href={whatsappLink}
+								target='_blank'
+								rel='noopener noreferrer'
 							>
-								Agendar el mio!
+								Quiero contactarlos!
 							</Button>
 						</Flex>
 						<Flex

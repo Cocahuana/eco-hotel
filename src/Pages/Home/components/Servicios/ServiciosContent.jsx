@@ -9,6 +9,7 @@ import {
 	ListItem,
 	Heading,
 } from "@chakra-ui/react";
+import UnidadNegocioBar from "../../../../components/UnidadNegocioBar/UnidadNegocioBar";
 function ServiciosContent(props) {
 	const myTheme = useContext(themeContext);
 	const { accent1, text } = myTheme;
@@ -30,10 +31,10 @@ function ServiciosContent(props) {
 			fontWeight='400'
 		>
 			<Flex w='100%' flexDir='column' pl={{ base: 0, md: "5%" }}>
-				<Box ml='10%'>
+				{/* <Box ml='10%'>
 					<GoldHeading title={title} letterSpacing='2px' />
 				</Box>
-				<Box h='2px' bg={accent1} w='25%'></Box>
+				<Box h='2px' bg={accent1} w='25%'></Box> */}
 			</Flex>
 			<Flex
 				w='100%'
@@ -45,6 +46,8 @@ function ServiciosContent(props) {
 					<Heading as='h2' size='2xl' py='10px'>
 						{subTitle}
 					</Heading>
+
+					<UnidadNegocioBar unidad={props.unidad} />
 					<Text size='md' color='#5F5F5F'>
 						{description}
 					</Text>
