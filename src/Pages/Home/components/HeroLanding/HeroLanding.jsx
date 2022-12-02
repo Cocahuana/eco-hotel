@@ -68,10 +68,10 @@ function HeroLanding(props) {
 					>
 						<Flex
 							w='100%'
-							borderRight={{
-								base: "0px",
-								lg: `2px solid ${theme.accent1_active}`,
-							}}
+							// borderRight={{
+							// 	base: "0px",
+							// 	lg: `2px solid ${theme.accent1_active}`,
+							// }}
 							borderTop={{
 								base: `2px solid ${theme.accent1_active}`,
 								lg: "0px",
@@ -88,23 +88,21 @@ function HeroLanding(props) {
 								textDecoration='line-through'
 								fontWeight='bold'
 							>
-								USD 95000
+								{/* USD 95000 */}
 							</Text>
 							<Flex>
 								<Text
 									fontSize={{ base: "3rem", md: "8rem" }}
 									fontWeight='bold'
-								>
-									$
-								</Text>
+								></Text>
 								<Text
-									fontSize={{ base: "5rem", md: "15rem" }}
+									fontSize={{ base: "3rem", md: "10rem" }}
 									fontWeight='bold'
 								>
-									75K
+									ECO HOTEL PRAGMA
 								</Text>
 							</Flex>
-							<Button
+							{/* <Button
 								bg='#FFDD00'
 								w='15rem'
 								h='2.7rem'
@@ -118,9 +116,9 @@ function HeroLanding(props) {
 								rel='noopener noreferrer'
 							>
 								Quiero contactarlos!
-							</Button>
+							</Button> */}
 						</Flex>
-						<Flex
+						{/* <Flex
 							w='100%'
 							flexDirection='column'
 							justifyContent={{
@@ -164,7 +162,7 @@ function HeroLanding(props) {
 							>
 								20% Rendimiento Anual!
 							</Text>
-						</Flex>
+						</Flex> */}
 					</Flex>
 				</Box>
 			</Parallax>
