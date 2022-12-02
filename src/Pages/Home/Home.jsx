@@ -1,5 +1,4 @@
 import Hero from "../../components/Hero/Hero";
-import ecoHotelImg from "../../assets/img/ecoHotel.jpg";
 import HeroContent from "./components/HeroContent";
 import ValueProposal from "./components/ValueProposal/ValueProposal";
 import Paths from "../../data/paths.json";
@@ -20,6 +19,12 @@ import ServiciosContent from "./components/Servicios/ServiciosContent";
 import HeroLanding from "./components/HeroLanding/HeroLanding";
 import fondoBlanco from "./components/HeroLanding/fondoBlanco.jpeg";
 import Contactanos from "./components/Contactanos";
+
+import housingImg from "./components/HeroLanding/housing.jpg";
+import inversionImg from "./components/HeroLanding/inversionImg.jpg";
+import construccionImg from "./components/HeroLanding/construccionImg.jpg";
+import ecoHotelImg from "../../assets/img/ecoHotel.jpg";
+
 import {
 	colorDesarrollo,
 	colorEcoHotel,
@@ -138,6 +143,94 @@ function Home() {
 				></Flex>
 			</section>
 			<ServiciosSection
+				img={ecoHotelImg}
+				alt='Eco Hotel restaurant'
+				bg='white'
+				position='left'
+			>
+				<ServiciosContent
+					title='RESTAURANT'
+					subTitle='Eco Hotel'
+					description='Instalacions y servicios de primera categoria'
+					unidad={colorEcoHotel}
+					amenities={sportAmenities}
+				></ServiciosContent>
+			</ServiciosSection>
+			<section id={ourServices.sport.id} style={{ width: "100%" }}>
+				<Flex
+					bg='white'
+					w='100%'
+					minH={{ base: "10vh", lg: "20vh" }}
+				></Flex>
+			</section>
+			<ServiciosSection
+				img={inversionImg}
+				alt='Eco Hotel Actividad Fisica, cancha de 11'
+				bg='white'
+				position='right'
+			>
+				<ServiciosContent
+					title='ACTIVIDAD DEPORTIVA'
+					subTitle='DESARROLLO'
+					description='Inversiones sólidas, proyectos y emprendimientos'
+					amenities={sportAmenities}
+					unidad={colorDesarrollo}
+				></ServiciosContent>
+			</ServiciosSection>
+			<section id={ourServices.coworking.id} style={{ width: "100%" }}>
+				<Flex
+					bg='white'
+					w='100%'
+					minH={{ base: "10vh", lg: "20vh" }}
+				></Flex>
+			</section>
+			<ServiciosSection
+				img={construccionImg}
+				alt='Eco Hotel espacios de co-working'
+				bg='white'
+				position='left'
+			>
+				<ServiciosContent
+					title='CO-WORKING'
+					subTitle='CONSTRUCCIÓN'
+					description='Servicio eficiente, confiable.'
+					amenities={coworkingAmenities}
+					unidad={colorConstrucciones}
+				></ServiciosContent>
+			</ServiciosSection>
+			<section style={{ width: "100%" }}>
+				<Flex
+					bg='white'
+					w='100%'
+					minH={{ base: "10vh", lg: "20vh" }}
+				></Flex>
+			</section>
+			<ServiciosSection
+				img={housingImg}
+				alt='Eco Hotel espacios de co-working'
+				bg='white'
+				position='right'
+			>
+				<ServiciosContent
+					title='CO-WORKING'
+					subTitle='HOUSING'
+					description='Contamos con un espacio de Coworking, sala de reuniones y salas de capacitación para el personal de las empresas que nos eligen.'
+					amenities={coworkingAmenities}
+					unidad={colorHousing}
+				></ServiciosContent>
+			</ServiciosSection>
+
+			{/* <section id={ourServices.id} style={{ width: "100%" }}>
+				<Flex bg='white' w='100%' minH='0vh'></Flex>
+			</section>
+			<section id={ourServices.restaurant.id} style={{ width: "100%" }}>
+				<Flex
+					bg='white'
+					w='100%'
+					minH={{ base: "10vh", lg: "20vh" }}
+				></Flex>
+			</section>
+			<ServiciosSection
 				img={imgRestaurant}
 				alt='Eco Hotel restaurant'
 				bg='white'
@@ -192,13 +285,19 @@ function Home() {
 					amenities={coworkingAmenities}
 					unidad={colorConstrucciones}
 				></ServiciosContent>
-			</ServiciosSection>
+			</ServiciosSection> */}
 			<Flex
-				mt='30px'
+				mt='2rem'
 				bg='black'
 				w='100%'
 				minH={{ base: "10vh", lg: "10vh" }}
-			></Flex>
+				alignItems='center'
+				justifyContent='center'
+			>
+				<Text fontSize={{ base: "2rem", lg: "4rem" }} color='#ccc'>
+					Ubicación
+				</Text>
+			</Flex>
 			<section id={location.id} style={{ width: "100%" }}>
 				<Flex w='100%' h='60vh'>
 					<iframe
