@@ -6,6 +6,10 @@ import skyBg from "./skyBg.jpg";
 import { useContext } from "react";
 import { themeContext } from "../../../../context/themeContext";
 import hotelEntero from "../../../../assets/img/pragma4.jpg";
+import hotelCieloDia from "./hotelCieloDia.png";
+import hotelCieloNoche from "./hotelCieloNoche.png";
+import luna from "./luna.png";
+
 const goodParallax = (
 	<Parallax
 		style={{ height: "100%", width: "100%" }}
@@ -46,7 +50,7 @@ function HeroLanding(props) {
 		<Flex h={props.h} w={props.w}>
 			<Parallax
 				style={{ height: "100%", width: "100%" }}
-				bgImage={hotelEntero}
+				bgImage={hotelCieloDia}
 				bgImageAlt='Eco hotel sky'
 				strength={-300}
 			>
@@ -63,46 +67,49 @@ function HeroLanding(props) {
 						justifyContent='center'
 						w={{ base: "100%", xl: "75%" }}
 						h={{ base: "100%", lg: "50vh" }}
-						px={{ base: "1.5rem", lg: 0 }}
-						flexDirection={{ base: "column-reverse", lg: "row" }}
+						px={{ base: "1.5rem", xl: 0 }}
+						flexDirection={{ base: "column-reverse", xl: "row" }}
 					>
 						<Flex
 							w='100%'
-							// borderRight={{
-							// 	base: "0px",
-							// 	lg: `2px solid ${theme.accent1_active}`,
-							// }}
+							borderRight={{
+								base: "0px",
+								xl: `2px solid ${theme.accent1_active}`,
+							}}
 							borderTop={{
 								base: `2px solid ${theme.accent1_active}`,
-								lg: "0px",
+								xl: "0px",
 							}}
 							flexDirection='column'
 							justifyContent='center'
 							alignItems='center'
 							color='white'
-							py={{ base: "1rem", lg: "0px" }}
+							py={{ base: "1rem", xl: "0px" }}
+							h={{ sm: "40%", xl: "100%" }}
 						>
 							<Text
-								fontSize={{ base: "1.5rem", md: "3rem" }}
+								fontSize={{ base: "2rem", md: "3rem" }}
 								color='red.500'
 								textDecoration='line-through'
 								fontWeight='bold'
 							>
-								{/* USD 95000 */}
+								U$ 100000
 							</Text>
 							<Flex>
 								<Text
-									fontSize={{ base: "3rem", md: "8rem" }}
-									fontWeight='bold'
-								></Text>
-								<Text
-									fontSize={{ base: "3rem", md: "10rem" }}
+									fontSize={{ base: "4rem", md: "6rem" }}
 									fontWeight='bold'
 								>
-									ECO HOTEL PRAGMA
+									U$
+								</Text>
+								<Text
+									fontSize={{ base: "5rem", md: "11rem" }}
+									fontWeight='bold'
+								>
+									95k
 								</Text>
 							</Flex>
-							{/* <Button
+							<Button
 								bg='#FFDD00'
 								w='15rem'
 								h='2.7rem'
@@ -116,35 +123,38 @@ function HeroLanding(props) {
 								rel='noopener noreferrer'
 							>
 								Quiero contactarlos!
-							</Button> */}
+							</Button>
 						</Flex>
-						{/* <Flex
+						<Flex
 							w='100%'
 							flexDirection='column'
 							justifyContent={{
-								base: "center",
+								base: "space-evenly",
 								lg: "flex-start",
 							}}
 							alignItems='center'
-							textAlign={{ base: "center", lg: "left" }}
+							textAlign={{ base: "center", xl: "left" }}
 							py='10px'
 							px='20px'
+							// bg='violet'
+							h={{ base: "50vh", md: "auto" }}
 						>
 							<Text
 								color='white'
-								fontSize={{ base: "1rem", md: "2rem" }}
+								fontSize={{ base: "2.5rem", md: "4rem" }}
 								w='100%'
+								fontWeight='bold'
 							>
-								INVERSIÓN TEMPRANA:
+								INVERSIÓN PREVENTA:
 							</Text>
 
 							<Text
 								color='#FFDD00'
-								fontSize={{ base: "3rem", md: "5rem" }}
+								fontSize={{ base: "2rem", md: "3rem" }}
 								fontFamily={theme.ff.bold}
 								w='100%'
 							>
-								ANTES DEL 15/12/2022
+								ANTES DEL 15.12.2022
 							</Text>
 							<Text
 								color='white'
@@ -154,15 +164,34 @@ function HeroLanding(props) {
 							>
 								3 AMB + Cochera!
 							</Text>
-							<Text
-								color='white'
-								fontSize={{ base: "1rem", md: "1.5rem" }}
-								w='100%'
-								fontWeight='800'
-							>
-								20% Rendimiento Anual!
-							</Text>
-						</Flex> */}
+							<Flex>
+								<Text
+									color='#FFDD00'
+									fontSize={{ base: "5rem", md: "10rem" }}
+									w='100%'
+									fontWeight='bold'
+									// bg='blue'
+									display='flex'
+									justifyContent='center'
+									alignItems='center'
+								>
+									16%
+								</Text>
+								<Text
+									color='white'
+									fontSize={{ base: "2rem", md: "4rem" }}
+									w='100%'
+									fontWeight='bold'
+									// bg='red'
+									display='flex'
+									justifyContent='center'
+									alignItems='center'
+									textAlign='center'
+								>
+									Rendimiento Anual!
+								</Text>
+							</Flex>
+						</Flex>
 					</Flex>
 				</Box>
 			</Parallax>
