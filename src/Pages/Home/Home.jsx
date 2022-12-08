@@ -68,7 +68,7 @@ function Home() {
 			<HeroLanding w='100%' h='100vh' img={fondoBlanco} />
 
 			<ValueProposal>
-				<Flex bg='#997e1e' w='100%' h='1px'></Flex>
+				{/* <Flex bg='#997e1e' w='100%' h='1px'></Flex>
 				<Heading
 					as='h2'
 					m={5}
@@ -119,7 +119,7 @@ function Home() {
 							DEPARTAMENTO TOTALMENTE EQUIPADO
 						</PromotionText>
 					</Box>
-				</Flex>
+				</Flex> */}
 			</ValueProposal>
 
 			<section id={ourServices.id} style={{ width: "100%" }}>
