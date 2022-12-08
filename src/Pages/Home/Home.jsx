@@ -31,6 +31,7 @@ import {
 	colorConstrucciones,
 	colorHousing,
 } from "../../components/UnidadNegocioBar/ColoresNegocio/Colores";
+import ContactForm from "./components/ContactForm/ContactForm";
 const ecoHotel = {
 	title: "ECO HOTEL",
 	subTitle: "Tu mejor experiencia en Vaca Muerta",
@@ -307,6 +308,7 @@ function Home() {
 					<Contactanos />
 				</Flex>
 			</section> */}
+			<ContactForm />
 		</>
 	);
 }
