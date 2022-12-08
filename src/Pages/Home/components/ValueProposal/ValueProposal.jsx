@@ -9,7 +9,7 @@ import {
 	ViewTablet,
 	ViewMobile,
 } from "../../../../components/Breakpoints";
-import brochure from "../../../../assets/PRESENTACION 6.pdf";
+import brochure from "../../../../assets/PRESENTACION-7-NABORS.pdf";
 // import rentabilidadImg from "./rentabilidad.jpeg";
 import planoDelComplejo from "./plano-del-complejo.jpeg";
 import styled from "@emotion/styled";

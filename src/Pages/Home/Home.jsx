@@ -65,17 +65,7 @@ function Home() {
 	];
 	return (
 		<>
-			{/* <Flex w='100%' h='200vh' align='center' justify='center' bg='white'>
-			</Flex> */}
 			<HeroLanding w='100%' h='100vh' img={fondoBlanco} />
-			{/* <Hero img={ecoHotelImg} alt='Eco Hotel' bg='white' position='right'>
-				<HeroContent
-					title={ecoHotel.title}
-					subTitle={ecoHotel.subTitle}
-					description={ecoHotel.description}
-					position='right'
-				/>
-			</Hero> */}
 
 			<ValueProposal>
 				<Flex bg='#997e1e' w='100%' h='1px'></Flex>
