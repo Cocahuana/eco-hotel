@@ -1,12 +1,19 @@
 import React, { useState, useRef } from "react";
 import Form from "../../../../components/Form/Form";
 import FormInput from "../../../../components/Form/FormInput/FormInput";
-import { Heading, Box, Flex } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { FaUser } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+
+/*
+ * @fullName, @email y @phoneNumber son variables usadas en emailJs para el template indicado en emailjsSettings.templateId
+ *
+ *
+ */
 function ContactForm(props) {
 	const [message, setMessage] = useState("");
+	const [status, setStatus] = useState(null);
 	const refForm = useRef();
 	const emailJsSettings = {
 		serviceId: "service_s6fk0l3",
@@ -31,9 +38,11 @@ function ContactForm(props) {
 			.then(
 				(result) => {
 					console.log("Result: ", result.text);
+					setStatus(true);
 				},
 				(error) => {
 					console.log("Error: ", error.text);
+					setStatus(false);
 				}
 			);
 	};
@@ -68,10 +77,15 @@ function ContactForm(props) {
 					leftIcon={<PhoneIcon />}
 				/>
 			</Form>
-			{console.log(message)}
-			<p fontSize='3rem' color='green'>
-				{message}
-			</p>
+			{status === true ? (
+				<Text fontSize='1rem' color='green'>
+					{message}
+				</Text>
+			) : (
+				<Text fontSize='1rem' color='red'>
+					{message}
+				</Text>
+			)}
 		</Box>
 	);
 }
