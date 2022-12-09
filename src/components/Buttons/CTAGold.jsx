@@ -44,13 +44,13 @@ function CTAGold(props) {
 	return (
 		<Stack direction={"row"} align={"center"}>
 			<Button
-				as='a'
+				as={props.as ? props.as : "a"}
 				// @href is the link for download
 				// @download is how the file will be named after being download
-				href={props.href}
+				href={props.href ? props.href : null}
 				target='_blank'
 				rel='noopener noreferrer'
-				download={props.fileName}
+				download={props.fileName ? props.fileName : null}
 				variant='outline'
 				color={theme.accent1}
 				borderColor={theme.accent1}

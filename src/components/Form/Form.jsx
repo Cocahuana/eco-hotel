@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-
+import Send from "../Buttons/Send";
+import styled from "styled-components";
+const FormStyle = styled.form`
+	width: 100%;
+`;
 export const FormContext = React.createContext({
 	form: {},
 });
 
 function Form(props) {
-	const { children, submit = () => {}, initialValues } = props;
+	const { children, submit = () => {}, initialValues, ref } = props;
 
 	const [form, setForm] = useState(initialValues);
 
@@ -23,7 +27,7 @@ function Form(props) {
 	};
 
 	return (
-		<form className='Form'>
+		<FormStyle ref={props.myref} className='Form'>
 			<FormContext.Provider
 				value={{
 					form,
@@ -32,11 +36,10 @@ function Form(props) {
 			>
 				{children}
 			</FormContext.Provider>
-
-			<button type='button' onClick={() => submit(form)}>
-				Submit
-			</button>
-		</form>
+			<Send onClick={() => submit(form)} float='right'>
+				Enviar
+			</Send>
+		</FormStyle>
 	);
 }
 

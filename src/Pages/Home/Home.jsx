@@ -308,7 +308,40 @@ function Home() {
 					<Contactanos />
 				</Flex>
 			</section> */}
-			<ContactForm />
+			<section id={contact.id} style={{ width: "100%" }}>
+				<Box bg='black' h='70vh' w='full' px='10rem' py='5rem'>
+					<Box display='flex' alignItems='center' mb='3rem'>
+						<Flex w='50%' h='100%'>
+							<Flex flexDirection='column' maxW='60%'>
+								<Heading as='h2' fontSize='5rem' color='white'>
+									Contacto
+								</Heading>
+								<Text
+									fontSize='1.4rem'
+									color='#ccc'
+									mt='3rem'
+									textAlign='justify'
+								>
+									Envie sus datos mediante el formulario y nos
+									contactaremos con usted en la brevedad.
+								</Text>
+								<Text
+									fontSize='1.4rem'
+									color='#ccc'
+									textAlign='justify'
+								>
+									Es un gusto para nosotros ayudarle con
+									cualquier consulta que necesite.
+								</Text>
+							</Flex>
+						</Flex>
+						<Flex w='50%' h='100%'>
+							<ContactForm w='100%' paddingLeft='5rem' />
+						</Flex>
+					</Box>
+					<Box borderTop='2px solid #997e1e'></Box>
+				</Box>
+			</section>
 		</>
 	);
 }
