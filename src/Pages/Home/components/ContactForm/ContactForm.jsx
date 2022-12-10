@@ -26,8 +26,7 @@ function ContactForm(props) {
 		email: "",
 		phoneNumber: "",
 	};
-	const sendEmail = (formInfo) => {
-		console.log("Send Email: formInfo: ", formInfo);
+	const sendEmail = (form) => {
 		emailjs
 			.sendForm(
 				emailJsSettings.serviceId,
@@ -37,21 +36,23 @@ function ContactForm(props) {
 			)
 			.then(
 				(result) => {
-					console.log("Result: ", result.text);
+					console.log("Result: ", result);
 					setStatus(true);
+					setMessage(
+						`Le agradecemos su solicitud ${form.fullName} ! Usted será respondido al mail: ${form.email} o a este numero de teléfono: ${form.phoneNumber}. Nos contactaremos con usted cuanto antes!`
+					);
 				},
 				(error) => {
-					console.log("Error: ", error.text);
+					console.log("Error: ", error);
 					setStatus(false);
+					setMessage(
+						`Hubo un problema al enviar la solicitud, por favor vuelvalo a intentar`
+					);
 				}
 			);
 	};
-	console.log("RefForm: ", refForm);
 	const submit = (form) => {
 		sendEmail(form);
-		setMessage(
-			`Thanks for signing up, ${form.fullName} ! We've sent you an email to ${form.email} with this number: ${form.phoneNumber}.`
-		);
 	};
 	return (
 		<Box

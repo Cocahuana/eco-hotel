@@ -309,21 +309,39 @@ function Home() {
 				</Flex>
 			</section> */}
 			<section id={contact.id} style={{ width: "100%" }}>
-				<Box bg='black' h='70vh' w='full' px='10rem' py='5rem'>
-					<Box display='flex' alignItems='center' mb='3rem'>
-						<Flex w='50%' h='100%'>
-							<Flex flexDirection='column' maxW='60%'>
+				<Box
+					bg='black'
+					h={{ base: "auto", xl: "70vh" }}
+					w='full'
+					px={{ base: "2rem", xl: "10rem" }}
+					py='5rem'
+				>
+					<Box
+						display='flex'
+						alignItems='center'
+						mb='3rem'
+						flexDirection={{ base: "column", xl: "row" }}
+					>
+						<Flex w={{ base: "100%", xl: "50%" }} h='100%'>
+							<Flex
+								flexDirection='column'
+								maxW={{ base: "100%", xl: "60%" }}
+								px={{ base: "2rem", xl: "0px" }}
+								alignItems={{ base: "center", xl: "left" }}
+								justifyContent={{ base: "center", xl: "left" }}
+							>
 								<Heading as='h2' fontSize='5rem' color='white'>
 									Contacto
 								</Heading>
 								<Text
 									fontSize='1.4rem'
 									color='#ccc'
-									mt='3rem'
+									mt={{ base: "1rem", xl: "3rem" }}
 									textAlign='justify'
 								>
 									Envie sus datos mediante el formulario y nos
-									contactaremos con usted en la brevedad.
+									pondremos en contacto con usted en la
+									brevedad.
 								</Text>
 								<Text
 									fontSize='1.4rem'
@@ -331,12 +349,17 @@ function Home() {
 									textAlign='justify'
 								>
 									Es un gusto para nosotros ayudarle con
-									cualquier consulta que necesite.
+									cualquier consulta que disponga.
 								</Text>
 							</Flex>
 						</Flex>
-						<Flex w='50%' h='100%'>
-							<ContactForm w='100%' paddingLeft='5rem' />
+						<Flex
+							w={{ base: "100%", xl: "50%" }}
+							h='100%'
+							pl={{ base: "2rem", xl: "5rem" }}
+							pr={{ base: "2rem", xl: "0px" }}
+						>
+							<ContactForm w='100%' />
 						</Flex>
 					</Box>
 					<Box borderTop='2px solid #997e1e'></Box>
