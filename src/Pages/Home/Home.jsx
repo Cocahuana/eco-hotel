@@ -31,6 +31,7 @@ import {
 	colorConstrucciones,
 	colorHousing,
 } from "../../components/UnidadNegocioBar/ColoresNegocio/Colores";
+import ContactForm from "./components/ContactForm/ContactForm";
 const ecoHotel = {
 	title: "ECO HOTEL",
 	subTitle: "Tu mejor experiencia en Vaca Muerta",
@@ -65,20 +66,10 @@ function Home() {
 	];
 	return (
 		<>
-			{/* <Flex w='100%' h='200vh' align='center' justify='center' bg='white'>
-			</Flex> */}
 			<HeroLanding w='100%' h='100vh' img={fondoBlanco} />
-			{/* <Hero img={ecoHotelImg} alt='Eco Hotel' bg='white' position='right'>
-				<HeroContent
-					title={ecoHotel.title}
-					subTitle={ecoHotel.subTitle}
-					description={ecoHotel.description}
-					position='right'
-				/>
-			</Hero> */}
 
 			<ValueProposal>
-				<Flex bg='#997e1e' w='100%' h='1px'></Flex>
+				{/* <Flex bg='#997e1e' w='100%' h='1px'></Flex>
 				<Heading
 					as='h2'
 					m={5}
@@ -129,7 +120,7 @@ function Home() {
 							DEPARTAMENTO TOTALMENTE EQUIPADO
 						</PromotionText>
 					</Box>
-				</Flex>
+				</Flex> */}
 			</ValueProposal>
 
 			<section id={ourServices.id} style={{ width: "100%" }}>
@@ -317,6 +308,63 @@ function Home() {
 					<Contactanos />
 				</Flex>
 			</section> */}
+			<section id={contact.id} style={{ width: "100%" }}>
+				<Box
+					bg='black'
+					h={{ base: "auto", xl: "70vh" }}
+					w='full'
+					px={{ base: "2rem", xl: "10rem" }}
+					py='5rem'
+				>
+					<Box
+						display='flex'
+						alignItems='center'
+						mb='3rem'
+						flexDirection={{ base: "column", xl: "row" }}
+					>
+						<Flex w={{ base: "100%", xl: "50%" }} h='100%'>
+							<Flex
+								flexDirection='column'
+								maxW={{ base: "100%", xl: "60%" }}
+								px={{ base: "2rem", xl: "0px" }}
+								alignItems={{ base: "center", xl: "left" }}
+								justifyContent={{ base: "center", xl: "left" }}
+							>
+								<Heading as='h2' fontSize='5rem' color='white'>
+									Contacto
+								</Heading>
+								<Text
+									fontSize='1.4rem'
+									color='#ccc'
+									mt={{ base: "1rem", xl: "3rem" }}
+									textAlign='justify'
+								>
+									Envie sus datos mediante el formulario y nos
+									pondremos en contacto con usted en la
+									brevedad.
+								</Text>
+								<Text
+									fontSize='1.4rem'
+									color='#ccc'
+									textAlign='justify'
+								>
+									Es un gusto para nosotros ayudarle con
+									cualquier consulta que disponga.
+								</Text>
+							</Flex>
+						</Flex>
+						<Flex
+							w={{ base: "100%", xl: "50%" }}
+							h='100%'
+							pl={{ base: "2rem", xl: "5rem" }}
+							pr={{ base: "2rem", xl: "0px" }}
+						>
+							<ContactForm w='100%' />
+						</Flex>
+					</Box>
+					<Box borderTop='2px solid #997e1e'></Box>
+				</Box>
+			</section>
 		</>
 	);
 }

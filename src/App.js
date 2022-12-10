@@ -23,5 +23,4 @@ function App() {
 		</themeContext.Provider>
 	);
 }
-
 export default App;
