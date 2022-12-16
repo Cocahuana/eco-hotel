@@ -25,6 +25,7 @@ import inversionImg from "./components/HeroLanding/inversionImg.jpg";
 import construccionImg from "./components/HeroLanding/construccionImg.jpg";
 import ecoHotelImg from "../../assets/img/ecoHotel.jpg";
 import { useContext } from "react";
+import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 
 import {
 	colorDesarrollo,
@@ -68,12 +69,85 @@ function Home() {
 		"WI-FI por fibra óptica",
 		"Seguridad",
 	];
+	const footerUIPragma = (
+		<Text
+			fontSize={"1.3rem"}
+			fontWeight={800}
+			color={theme.text.withAccent1}
+			textAlign='center'
+		>
+			ECO HOTEL PRAGMA pertenece al PRAGMA GROUP
+		</Text>
+	);
+	const footerUI = (
+		<Flex
+			justifyContent='space-around'
+			alignItems='center'
+			w='100%'
+			h='100%'
+			flexDirection={{ base: "column", xl: "row" }}
+		>
+			<Flex
+				display={{ md: "none", xl: "flex" }}
+				alignItems='center'
+				justifyContent={"flex-start"}
+			>
+				{footerUIPragma}
+			</Flex>
+			<Flex
+				flexDirection={"column"}
+				alignItems='center'
+				justifyContent={"flex-start"}
+			>
+				<Text
+					fontSize={"1.3rem"}
+					fontWeight={800}
+					color={theme.text.withAccent1}
+				>
+					Reservas
+				</Text>
+				<Text>+54 9 11 5048 1966 </Text>
+			</Flex>
+			<Flex
+				flexDirection={"column"}
+				alignItems='center'
+				justifyContent={"flex-start"}
+			>
+				<Text
+					fontSize={"1.3rem"}
+					fontWeight={800}
+					color={theme.text.withAccent1}
+				>
+					Administración{" "}
+				</Text>
+				<Text> +54299 4583548</Text>
+			</Flex>
+			<Flex
+				flexDirection={"column"}
+				alignItems='center'
+				justifyContent={"flex-start"}
+			>
+				<Text
+					fontSize={"1.3rem"}
+					fontWeight={800}
+					color={theme.text.withAccent1}
+				>
+					Contacto
+				</Text>
+				<Text>
+					<EmailIcon /> ecohotel@pragmahotel.com.ar
+				</Text>
+			</Flex>
+		</Flex>
+	);
+
 	return (
 		<>
-			<HeroLanding w='100%' h='100vh' img={fondoBlanco} />
+			<Box overflow={"hidden"}>
+				<HeroLanding w='100%' h='100vh' img={fondoBlanco} />
 
-			<ValueProposal>
-				{/* <Flex bg='#997e1e' w='100%' h='1px'></Flex>
+				<ValueProposal>
+					{/* <Flex bg='#997e1e' w='100%' h='1px'></Flex>
 				<Heading
 					as='h2'
 					m={5}
@@ -125,97 +199,103 @@ function Home() {
 						</PromotionText>
 					</Box>
 				</Flex> */}
-			</ValueProposal>
+				</ValueProposal>
 
-			<section id={ourServices.id} style={{ width: "100%" }}>
-				<Flex bg='white' w='100%' minH='0vh'></Flex>
-			</section>
-			<section id={ourServices.restaurant.id} style={{ width: "100%" }}>
-				<Flex
+				<section id={ourServices.id} style={{ width: "100%" }}>
+					<Flex bg='white' w='100%' minH='0vh'></Flex>
+				</section>
+				<section
+					id={ourServices.restaurant.id}
+					style={{ width: "100%" }}
+				>
+					<Flex
+						bg='white'
+						w='100%'
+						minH={{ base: "10vh", lg: "20vh" }}
+					></Flex>
+				</section>
+				<ServiciosSection
+					img={ecoHotelImg}
+					alt='Eco Hotel restaurant'
 					bg='white'
-					w='100%'
-					minH={{ base: "10vh", lg: "20vh" }}
-				></Flex>
-			</section>
-			<ServiciosSection
-				img={ecoHotelImg}
-				alt='Eco Hotel restaurant'
-				bg='white'
-				position='left'
-			>
-				<ServiciosContent
-					title='RESTAURANT'
-					subTitle='Eco Hotel'
-					description='Instalacions y servicios de primera categoria'
-					unidad={colorEcoHotel}
-					amenities={sportAmenities}
-				></ServiciosContent>
-			</ServiciosSection>
-			<section id={ourServices.sport.id} style={{ width: "100%" }}>
-				<Flex
+					position='left'
+				>
+					<ServiciosContent
+						title='RESTAURANT'
+						subTitle='Eco Hotel'
+						description='Instalacions y servicios de primera categoria'
+						unidad={colorEcoHotel}
+						amenities={sportAmenities}
+					></ServiciosContent>
+				</ServiciosSection>
+				<section id={ourServices.sport.id} style={{ width: "100%" }}>
+					<Flex
+						bg='white'
+						w='100%'
+						minH={{ base: "10vh", lg: "20vh" }}
+					></Flex>
+				</section>
+				<ServiciosSection
+					img={inversionImg}
+					alt='Eco Hotel Actividad Fisica, cancha de 11'
 					bg='white'
-					w='100%'
-					minH={{ base: "10vh", lg: "20vh" }}
-				></Flex>
-			</section>
-			<ServiciosSection
-				img={inversionImg}
-				alt='Eco Hotel Actividad Fisica, cancha de 11'
-				bg='white'
-				position='right'
-			>
-				<ServiciosContent
-					title='ACTIVIDAD DEPORTIVA'
-					subTitle='DESARROLLO'
-					description='Inversiones sólidas, proyectos y emprendimientos'
-					amenities={sportAmenities}
-					unidad={colorDesarrollo}
-				></ServiciosContent>
-			</ServiciosSection>
-			<section id={ourServices.coworking.id} style={{ width: "100%" }}>
-				<Flex
+					position='right'
+				>
+					<ServiciosContent
+						title='ACTIVIDAD DEPORTIVA'
+						subTitle='DESARROLLO'
+						description='Inversiones sólidas, proyectos y emprendimientos'
+						amenities={sportAmenities}
+						unidad={colorDesarrollo}
+					></ServiciosContent>
+				</ServiciosSection>
+				<section
+					id={ourServices.coworking.id}
+					style={{ width: "100%" }}
+				>
+					<Flex
+						bg='white'
+						w='100%'
+						minH={{ base: "10vh", lg: "20vh" }}
+					></Flex>
+				</section>
+				<ServiciosSection
+					img={construccionImg}
+					alt='Eco Hotel espacios de co-working'
 					bg='white'
-					w='100%'
-					minH={{ base: "10vh", lg: "20vh" }}
-				></Flex>
-			</section>
-			<ServiciosSection
-				img={construccionImg}
-				alt='Eco Hotel espacios de co-working'
-				bg='white'
-				position='left'
-			>
-				<ServiciosContent
-					title='CO-WORKING'
-					subTitle='CONSTRUCCIÓN'
-					description='Servicio eficiente, confiable.'
-					amenities={coworkingAmenities}
-					unidad={colorConstrucciones}
-				></ServiciosContent>
-			</ServiciosSection>
-			<section style={{ width: "100%" }}>
-				<Flex
+					position='left'
+				>
+					<ServiciosContent
+						title='CO-WORKING'
+						subTitle='CONSTRUCCIÓN'
+						description='Servicio eficiente, confiable.'
+						amenities={coworkingAmenities}
+						unidad={colorConstrucciones}
+					></ServiciosContent>
+				</ServiciosSection>
+				<section style={{ width: "100%" }}>
+					<Flex
+						bg='white'
+						w='100%'
+						minH={{ base: "10vh", lg: "20vh" }}
+					></Flex>
+				</section>
+				<ServiciosSection
+					img={housingImg}
+					alt='Eco Hotel espacios de co-working'
 					bg='white'
-					w='100%'
-					minH={{ base: "10vh", lg: "20vh" }}
-				></Flex>
-			</section>
-			<ServiciosSection
-				img={housingImg}
-				alt='Eco Hotel espacios de co-working'
-				bg='white'
-				position='right'
-			>
-				<ServiciosContent
-					title='CO-WORKING'
-					subTitle='HOUSING'
-					description='Contamos con un espacio de Coworking, sala de reuniones y salas de capacitación para el personal de las empresas que nos eligen.'
-					amenities={coworkingAmenities}
-					unidad={colorHousing}
-				></ServiciosContent>
-			</ServiciosSection>
+					position='right'
+				>
+					<ServiciosContent
+						title='CO-WORKING'
+						subTitle='HOUSING'
+						description='Contamos con un espacio de Coworking, sala de reuniones y salas de capacitación para el personal de las empresas que nos eligen.'
+						amenities={coworkingAmenities}
+						unidad={colorHousing}
+					></ServiciosContent>
+				</ServiciosSection>
 
-			{/* <section id={ourServices.id} style={{ width: "100%" }}>
+				{/* <section id={ourServices.id} style={{ width: "100%" }}>
 				<Flex bg='white' w='100%' minH='0vh'></Flex>
 			</section>
 			<section id={ourServices.restaurant.id} style={{ width: "100%" }}>
@@ -281,158 +361,144 @@ function Home() {
 					unidad={colorConstrucciones}
 				></ServiciosContent>
 			</ServiciosSection> */}
-			<Flex
-				mt='2rem'
-				bg='black'
-				w='100%'
-				minH={{ base: "10vh", lg: "10vh" }}
-				alignItems='center'
-				justifyContent='center'
-			>
-				<Text fontSize={{ base: "2rem", lg: "4rem" }} color='#ccc'>
-					Ubicación
-				</Text>
-			</Flex>
-			<section id={location.id} style={{ width: "100%" }}>
-				<Flex w='100%' h='60vh'>
-					<iframe
-						width='100%'
-						height='100%'
-						title='Eco hotel Location'
-						src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d50067.52262107152!2d-68.800222!3d-38.343886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b353272bfec21cf!2sEcotel%20Pragma%20A%C3%B1elo!5e0!3m2!1ses!2sar!4v1669908824019!5m2!1ses!2sar'
-						style={{ border: "0" }}
-						allowfullscreen=''
-						loading='lazy'
-						referrerpolicy='no-referrer-when-downgrade'
-					></iframe>
+				<Flex
+					mt='2rem'
+					bg='black'
+					w='100%'
+					minH={{ base: "10vh", lg: "10vh" }}
+					alignItems='center'
+					justifyContent='center'
+				>
+					<Text fontSize={{ base: "2rem", lg: "4rem" }} color='#ccc'>
+						Ubicación
+					</Text>
 				</Flex>
-			</section>
-			{/* <section id={contact.id} style={{ width: "100%" }}>
+				<section id={location.id} style={{ width: "100%" }}>
+					<Flex w='100%' h='60vh'>
+						<iframe
+							width='100%'
+							height='100%'
+							title='Eco hotel Location'
+							src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d50067.52262107152!2d-68.800222!3d-38.343886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b353272bfec21cf!2sEcotel%20Pragma%20A%C3%B1elo!5e0!3m2!1ses!2sar!4v1669908824019!5m2!1ses!2sar'
+							style={{ border: "0" }}
+							allowfullscreen=''
+							loading='lazy'
+							referrerpolicy='no-referrer-when-downgrade'
+						></iframe>
+					</Flex>
+				</section>
+				{/* <section id={contact.id} style={{ width: "100%" }}>
 				<Flex w='100%' h='60vh'>
 					<Contactanos />
 				</Flex>
 			</section> */}
-			<section id={contact.id} style={{ width: "100%" }}>
-				<Flex
-					bg='black'
-					h={{ base: "auto", xl: "70vh" }}
-					w='full'
-					px={{ base: "2rem", xl: "10rem" }}
-					py='5rem'
-					flexDirection='column'
-				>
-					<Box
-						display='flex'
-						alignItems='center'
-						mb='3rem'
-						flexDirection={{ base: "column", xl: "row" }}
+				<section id={contact.id} style={{ width: "100%" }}>
+					<Flex
+						bg='black'
+						h={{ base: "auto", xl: "70vh" }}
+						w='full'
+						px={{ base: "2rem", xl: "10rem" }}
+						py='5rem'
+						flexDirection='column'
 					>
-						<Flex w={{ base: "100%", xl: "50%" }} h='100%'>
-							<Flex
-								flexDirection='column'
-								maxW={{ base: "100%", xl: "60%" }}
-								px={{ base: "2rem", xl: "0px" }}
-								alignItems={{ base: "center", xl: "left" }}
-								justifyContent={{ base: "center", xl: "left" }}
-							>
-								<Heading as='h2' fontSize='5rem' color='white'>
-									Contacto
-								</Heading>
-								<Text
-									fontSize='1.4rem'
-									color='#ccc'
-									mt={{ base: "1rem", xl: "3rem" }}
-									textAlign='justify'
-								>
-									Envie sus datos mediante el formulario y nos
-									pondremos en contacto con usted en la
-									brevedad.
-								</Text>
-								<Text
-									fontSize='1.4rem'
-									color='#ccc'
-									textAlign='justify'
-								>
-									Es un gusto para nosotros ayudarle con
-									cualquier consulta que disponga.
-								</Text>
-							</Flex>
-						</Flex>
-						<Flex
-							w={{ base: "100%", xl: "50%" }}
-							h='100%'
-							pl={{ base: "2rem", xl: "5rem" }}
-							pr={{ base: "2rem", xl: "0px" }}
+						<Box
+							display='flex'
+							alignItems='center'
+							mb='3rem'
+							flexDirection={{ base: "column", xl: "row" }}
 						>
-							<ContactForm w='100%' />
-						</Flex>
-					</Box>
-					<Box
-						borderTop='2px solid #997e1e'
-						w='100%'
-						h='100%'
-						pt='1rem'
-					>
-						<Flex
+							<Flex w={{ base: "100%", xl: "50%" }} h='100%'>
+								<Flex
+									flexDirection='column'
+									maxW={{ base: "100%", xl: "60%" }}
+									px={{ base: "2rem", xl: "0px" }}
+									alignItems={{ base: "center", xl: "left" }}
+									justifyContent={{
+										base: "center",
+										xl: "left",
+									}}
+								>
+									<Heading
+										as='h2'
+										fontSize='5rem'
+										color='white'
+									>
+										Contacto
+									</Heading>
+									<Text
+										fontSize='1.4rem'
+										color='#ccc'
+										mt={{ base: "1rem", xl: "3rem" }}
+										textAlign='justify'
+									>
+										Envie sus datos mediante el formulario y
+										nos pondremos en contacto con usted en
+										la brevedad.
+									</Text>
+									<Text
+										fontSize='1.4rem'
+										color='#ccc'
+										textAlign='justify'
+									>
+										Es un gusto para nosotros ayudarle con
+										cualquier consulta que disponga.
+									</Text>
+								</Flex>
+							</Flex>
+							<Flex
+								w={{ base: "100%", xl: "50%" }}
+								h='100%'
+								pl={{ base: "2rem", xl: "5rem" }}
+								pr={{ base: "2rem", xl: "0px" }}
+							>
+								<ContactForm w='100%' />
+							</Flex>
+						</Box>
+						<Box
+							borderTop='2px solid #997e1e'
 							w='100%'
 							h='100%'
-							justifyContent='space-around'
-							alignItems='center'
-							color={theme.text.secondary}
+							pt='1rem'
 						>
-							<Text
-								fontSize={"1.3rem"}
-								fontWeight={800}
-								color={theme.text.withAccent1}
-							>
-								ECO HOTEL PRAGMA pertenece al PRAGMA GROUP
-							</Text>
 							<Flex
-								flexDirection={"column"}
+								w='100%'
+								h='100%'
+								justifyContent='space-around'
 								alignItems='center'
-								justifyContent={"flex-start"}
+								color={theme.text.secondary}
 							>
-								<Text
-									fontSize={"1.3rem"}
-									fontWeight={800}
-									color={theme.text.withAccent1}
+								<Flex
+									w='100%'
+									h='100%'
+									display={{
+										base: "flex",
+										md: "none",
+										xl: "flex",
+									}}
 								>
-									Reservas
-								</Text>
-								<Text>+54 9 11 5048 1966 </Text>
-							</Flex>
-							<Flex
-								flexDirection={"column"}
-								alignItems='center'
-								justifyContent={"flex-start"}
-							>
-								<Text
-									fontSize={"1.3rem"}
-									fontWeight={800}
-									color={theme.text.withAccent1}
+									{footerUI}
+								</Flex>
+								<Flex
+									w='100%'
+									h='100%'
+									display={{
+										base: "none",
+										sm: "none",
+										md: "flex",
+										xl: "none",
+									}}
+									justifyContent='space-evenly'
+									alignItems='center'
+									flexDirection='column'
 								>
-									Administración{" "}
-								</Text>
-								<Text> +54299 4583548</Text>
+									<Box my='1rem'>{footerUIPragma}</Box>
+									{footerUI}
+								</Flex>
 							</Flex>
-							<Flex
-								flexDirection={"column"}
-								alignItems='center'
-								justifyContent={"flex-start"}
-							>
-								<Text
-									fontSize={"1.3rem"}
-									fontWeight={800}
-									color={theme.text.withAccent1}
-								>
-									Contacto
-								</Text>
-								<Text> ecohotel@pragmahotel.com.ar</Text>
-							</Flex>
-						</Flex>
-					</Box>
-				</Flex>
-			</section>
+						</Box>
+					</Flex>
+				</section>
+			</Box>
 		</>
 	);
 }
