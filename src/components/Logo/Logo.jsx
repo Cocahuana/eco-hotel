@@ -13,7 +13,7 @@ const Cuadraditos = styled.div`
 `;
 function Logo(props) {
 	const theme = useContext(themeContext);
-	const { w, h } = props;
+	const { w, h, transition, filter } = props;
 	return (
 		<>
 			<Flex
@@ -23,6 +23,8 @@ function Logo(props) {
 				alignItems='center'
 				flexDirection='column'
 				my='8px'
+				filter={filter}
+				transition={transition}
 			>
 				<Flex
 					alignItems='center'
