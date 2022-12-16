@@ -90,7 +90,12 @@ function Navigation() {
 								colorChange ? "opacity(100%)" : "opacity(0%)"
 							}
 						/> */}
-						<Logo />
+						<Logo
+							transition='all 1s ease-out'
+							filter={
+								colorChange ? "opacity(100%)" : "opacity(0%)"
+							}
+						/>
 					</Link>
 				</Text>
 				<Flex
