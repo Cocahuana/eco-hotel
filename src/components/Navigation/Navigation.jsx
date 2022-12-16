@@ -19,6 +19,7 @@ import { Link } from "react-router-dom";
 import { Paths } from "..";
 import { useState } from "react";
 import logoEcoHotel from "../../assets/img/logoEcohotel.jpeg";
+import Logo from "../Logo/Logo";
 function Navigation() {
 	const { isOpen, onToggle } = useDisclosure();
 	const myTheme = useContext(themeContext);
@@ -82,13 +83,14 @@ function Navigation() {
 					color={useColorModeValue(text.withAccent1, text.base)}
 				>
 					<Link to='/'>
-						<Image
+						{/* <Image
 							src={logoEcoHotel}
 							transition='all 1s ease-out'
 							filter={
 								colorChange ? "opacity(100%)" : "opacity(0%)"
 							}
-						/>
+						/> */}
+						<Logo />
 					</Link>
 				</Text>
 				<Flex
