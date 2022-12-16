@@ -19,11 +19,12 @@ import ServiciosContent from "./components/Servicios/ServiciosContent";
 import HeroLanding from "./components/HeroLanding/HeroLanding";
 import fondoBlanco from "./components/HeroLanding/fondoBlanco.jpeg";
 import Contactanos from "./components/Contactanos";
-
+import { themeContext } from "../../context/themeContext";
 import housingImg from "./components/HeroLanding/housing.jpg";
 import inversionImg from "./components/HeroLanding/inversionImg.jpg";
 import construccionImg from "./components/HeroLanding/construccionImg.jpg";
 import ecoHotelImg from "../../assets/img/ecoHotel.jpg";
+import { useContext } from "react";
 
 import {
 	colorDesarrollo,
@@ -45,6 +46,9 @@ const PromotionText = styled.h3`
 `;
 
 function Home() {
+	const theme = useContext(themeContext);
+	const { background } = theme;
+
 	const { ourServices, gallery, location, contact } = Paths;
 	const { PricesInfo, earlyInvestment } = Prices;
 	const restaurantAmenities = [
@@ -309,12 +313,13 @@ function Home() {
 				</Flex>
 			</section> */}
 			<section id={contact.id} style={{ width: "100%" }}>
-				<Box
+				<Flex
 					bg='black'
 					h={{ base: "auto", xl: "70vh" }}
 					w='full'
 					px={{ base: "2rem", xl: "10rem" }}
 					py='5rem'
+					flexDirection='column'
 				>
 					<Box
 						display='flex'
@@ -362,8 +367,71 @@ function Home() {
 							<ContactForm w='100%' />
 						</Flex>
 					</Box>
-					<Box borderTop='2px solid #997e1e'></Box>
-				</Box>
+					<Box
+						borderTop='2px solid #997e1e'
+						w='100%'
+						h='100%'
+						pt='1rem'
+					>
+						<Flex
+							w='100%'
+							h='100%'
+							justifyContent='space-around'
+							alignItems='center'
+							color={theme.text.secondary}
+						>
+							<Text
+								fontSize={"1.3rem"}
+								fontWeight={800}
+								color={theme.text.withAccent1}
+							>
+								ECO HOTEL PRAGMA pertenece al PRAGMA GROUP
+							</Text>
+							<Flex
+								flexDirection={"column"}
+								alignItems='center'
+								justifyContent={"flex-start"}
+							>
+								<Text
+									fontSize={"1.3rem"}
+									fontWeight={800}
+									color={theme.text.withAccent1}
+								>
+									Reservas
+								</Text>
+								<Text>+54 9 11 5048 1966 </Text>
+							</Flex>
+							<Flex
+								flexDirection={"column"}
+								alignItems='center'
+								justifyContent={"flex-start"}
+							>
+								<Text
+									fontSize={"1.3rem"}
+									fontWeight={800}
+									color={theme.text.withAccent1}
+								>
+									Administración{" "}
+								</Text>
+								<Text> +54299 4583548</Text>
+							</Flex>
+							<Flex
+								flexDirection={"column"}
+								alignItems='center'
+								justifyContent={"flex-start"}
+							>
+								<Text
+									fontSize={"1.3rem"}
+									fontWeight={800}
+									color={theme.text.withAccent1}
+								>
+									Contacto
+								</Text>
+								<Text> ecohotel@pragmahotel.com.ar</Text>
+							</Flex>
+						</Flex>
+					</Box>
+				</Flex>
 			</section>
 		</>
 	);
